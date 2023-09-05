@@ -3,7 +3,7 @@
     <div class="container">
         <div class="header_inner d-flex align-items-center justify-content-between">
             <div class="logo">
-                <a href="{% url 'index' %}" class="light_logo"><img src="{% static 'assets/img_auto/logo.png' %}" alt="logo"></a>
+                <a href="{% url 'index' %}" class="light_logo"><img src="{{ setting.logo.url }}" alt="logo"></a>
             </div>
             <div class="mainnav d-none d-lg-block">
                 <ul class="main_menu">

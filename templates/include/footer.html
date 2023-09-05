@@ -12,15 +12,15 @@
                     <div class="communication">
                         <div class="info_body">
                             <h6>Email</h6>
-                            <h5>KBtrade@gmail.com</h5>
+                            <h5>{{ setting.email }}</h5>
                         </div>
                         <div class="info_body">
                             <h6>Номер телефона</h6>
-                            <h5>+996 555 777 666</h5>
+                            <h5>{{ setting.phone }}</h5>
                         </div>
                         <div class="info_body">
                             <h6>Наш адрес</h6>
-                            <h5>Кыргызстан, г.Бишкек</h5>
+                            <h5>{{ setting.address }}</h5>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                     <div class="footer_elements d-flex align-items-center justify-content-end">
                         <div class="footer_elements_inner">
                             <div class="footer_logo">
-                                <a href="index.html" class="light_logo"><img src="{% static 'assets/img_auto/logo.png' %}" alt="logo"></a>
+                                <a href="{% url 'index' %}" class="light_logo"><img src="{{ setting.logo.url }}" alt="logo"></a>
                             </div>
                             <div class="footer_social">
                                 <ul class="social_list">
@@ -41,7 +41,7 @@
                                 </ul>
                             </div>
                             <div class="copyright">
-                                <p>KB Trade 2023. By Codex Studio. All Rights Reserved</p>
+                                <p>KB Trade 2023. Сделано командой Codex Studio. Все права защищены</p>
                             </div>
                         </div>
                     </div>

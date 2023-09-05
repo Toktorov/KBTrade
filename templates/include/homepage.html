@@ -6,11 +6,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-        <meta name="author" content="">
+        <meta name="author" content="{{ setting.description }}">
         <!-- Favicon and touch Icons -->
-        <link href="{% static 'assets/img_auto/favicon.png' %}" rel="shortcut icon" type="image/png">
+        <link href="{{ setting.logo.url }}" rel="shortcut icon" type="image/png">
         <!-- Page Title -->
-        <title>KB Trade</title>    
+        <title>{{ setting.title }}</title>    
         <!-- Styles Include -->
         <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
     </head>
