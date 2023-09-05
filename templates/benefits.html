@@ -1,0 +1,247 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner"></div>
+            <div class="loading-text">
+                <span data-preloader-text="K" class="characters">K</span>
+                <span data-preloader-text="B" class="characters">B</span>
+                <span data-preloader-text=" " class="characters"> </span>
+                <span data-preloader-text="T" class="characters">T</span>
+                <span data-preloader-text="R" class="characters">R</span>
+                <span data-preloader-text="A" class="characters">A</span>
+                <span data-preloader-text="D" class="characters">D</span>
+                <span data-preloader-text="E" class="characters">E</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Effect -->
+    <div class="pointer bnz-pointer" id="bnz-pointer"></div>
+
+    <!-- Header -->
+    {% include 'include/header.html' %}
+
+    <div class="aside_info_wrapper">
+        <button class="aside_close"><i class="bi bi-x-lg"></i></button>
+        <div class="aside_logo">
+            <a href="index.html" class="light_logo"><img src="{% static 'assets/img_auto/logo.png' %}" alt="logo"></a>
+        </div>
+        <div class="aside_info_inner">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+            <div class="aside_info_inner_box">
+                <h5>Контакты</h5>
+                <p>+996 456 789 333</p>
+                <p>Кыргызстан</p>
+                <p>KBtrade@gmail.com</p>
+
+            </div>
+            <div class="social_sites">
+                <ul class="d-flex align-items-center justify-content-center">
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
+                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="bi bi-telegram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page_header">
+        <div class="page_header_inner">
+            <div class="container">
+                <div class="page_header_content d-flex align-items-center justify-content-between">
+                    <h2 class="heading">Преимущества</h2>
+                    <ul class="breadcrumb d-flex align-items-center">
+                        <li><a href="{% url 'index' %}">Главная</a></li>
+                        <li class="active">Преимущества</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main class="wrapper">
+        <!-- Our Team -->
+        <section class="team team-details">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12 col-md-12 ps-lg-0">
+                        <div class="team-member-information">
+                            <h5 class="name text-white">Преимущества</h5>
+                            <h6 class="designation text-uppercase text-olive">Lorem, ipsum.</h6>
+                            <div class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eius
+                                obcaecati necessitatibus. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Neque, dolore sequi. Quis, quod id accusantium, nisi possimus maiores nam enim deleniti
+                                exercitationem nulla mollitia, sit ab! Temporibus expedita eum sint nobis unde
+                                consequatur dolorem nemo, mollitia at dolores voluptate nesciunt magnam, quas provident
+                                obcaecati ipsa sequi fuga nostrum ullam eveniet. Aut, minus enim recusandae error,
+                                suscipit odit est dolorum quidem veniam quas, mollitia porro reiciendis impedit ea
+                                libero accusamus repellendus nulla aliquid quam in ut dolore eaque. Adipisci amet dicta
+                                natus enim eaque? Doloribus beatae quibusdam earum eaque, totam provident quo odio iure
+                                id illo praesentium accusantium repellat exercitationem aut labore sunt adipisci
+                                molestias eius non ab quaerat, hic explicabo reprehenderit! Molestias esse quisquam hic,
+                                necessitatibus asperiores dolorum nostrum eligendi unde blanditiis rem beatae quo
+                                nesciunt consectetur temporibus sint nisi nihil porro tempore optio sapiente natus
+                                magnam velit. Amet dolore aliquid ad repellendus quod ut. Itaque odio quod amet a?</div>
+
+                            <div class="edu-quali">
+                                <h6 class="widget-title">
+                                    Lorem, ipsum.
+                                    <span class="title-line"></span>
+                                </h6>
+                                <ul class="point_order">
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis
+                                        dignissimos reiciendis nisi incidunt, voluptatum, numquam ea eaque deleniti,
+                                        voluptatibus molestias! Omnis, doloribus delectus nemo numquam ea nam laboriosam
+                                        cumque? <span>Lorem, ipsum.</span></li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis
+                                        dignissimos reiciendis nisi incidunt, voluptatum, numquam ea eaque deleniti,
+                                        voluptatibus molestias! Omnis, doloribus delectus nemo numquam ea nam laboriosam
+                                        cumque? <span>Lorem, ipsum.</span></li>
+                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis
+                                        dignissimos reiciendis nisi incidunt, voluptatum, numquam ea eaque deleniti,
+                                        voluptatibus molestias! Omnis, doloribus delectus nemo numquam ea nam laboriosam
+                                        cumque? <span>Lorem, ipsum.</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="latest-projects">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="project">
+                                <h6 class="widget-title text-white mb-3">
+                                    Lorem, ipsum dolor.
+                                    <span class="title-line"></span>
+                                </h6>
+                                <div class="text text-white">At vero eos et accusamus et iusto odio digni
+                                    is simos ducimus qui blanditiis praesentium
+                                    volu ptatum dele niti atque corryi upti quos.
+                                    dolores et quas molestias. At vero eos et
+                                    accusamus et iusto.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="project">
+                                <a href="project-details.html">
+                                    <img src="https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_1_1600.jpg" alt="img">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="project">
+                                <a href="project-details.html">
+                                    <img src="https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_1_1600.jpg" alt="img">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="project">
+                                <a href="project-details.html">
+                                    <img src="https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_1_1600.jpg" alt="img">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="project">
+                                <a href="project-details.html">
+                                    <img src="https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_1_1600.jpg" alt="img">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="project">
+                                <a href="project-details.html">
+                                    <img src="https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_1_1600.jpg" alt="img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact_us bg-dark-200">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-5">
+                        <div class="section-header">
+                            <h2 class="text-white text-uppercase mb-4">Оставить заявку на подбор</h2>
+                            <p class="$gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi enim possimus temporibus at odit molestiae eius rerum quis, magnam id aliquam nihil sunt placeat hic blanditiis vitae deleniti necessitatibus adipisci consectetur. Ut at quam beatae!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="home_contact">
+                            <form action="" method="POST">
+                                <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="ФИО*" required aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="phone" id="phone" type="number" placeholder="Номер телефона WA или Telegram*" aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="Модель авто" required aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="Тип и объем двигателя" required aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="Цвет" required aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="email" id="email" type="email" placeholder="VIN номер и номер детали" required aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="email" id="email" type="email" placeholder="Комплектация" required aria-label=".form-control-lg example">
+                                
+                                <div class="btn_group">
+                                    <button type="submit" class="btn olive">Отправить</button>  
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Section Grid Lines -->
+            <ul class="grid_lines d-none d-md-flex justify-content-between">
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+            </ul>
+        </section>
+    </main>
+
+
+
+    <!-- Footer-->
+    {% include 'include/footer.html' %}
+
+    <div class="totop">
+        <a href="#">↑</a>
+    </div>
+    <!-- Section Grid Lines -->
+    <ul class="grid_lines d-none d-md-flex justify-content-between">
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+    </ul>
+
+
+{% endblock %}

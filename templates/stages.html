@@ -1,0 +1,167 @@
+{% extends 'include/homepage.html' %}    
+{% block content %}
+{% load static %}
+
+        <!-- Preloader -->
+        <div id="preloader">
+			<div class="preloader-inner">
+				<div class="spinner"></div>
+				<div class="loading-text">
+					<span data-preloader-text="K" class="characters">K</span>
+					<span data-preloader-text="B" class="characters">B</span>
+					<span data-preloader-text=" " class="characters"> </span>
+					<span data-preloader-text="T" class="characters">T</span>
+					<span data-preloader-text="R" class="characters">R</span>
+					<span data-preloader-text="A" class="characters">A</span>
+					<span data-preloader-text="D" class="characters">D</span>
+					<span data-preloader-text="E" class="characters">E</span>
+				</div>
+			</div>
+		</div>
+
+        <!-- Cursor Effect -->
+        <div class="pointer bnz-pointer" id="bnz-pointer"></div>
+
+        <!-- Header -->
+		{% include 'include/header.html' %}
+
+        <div class="aside_info_wrapper">
+			<button class="aside_close"><i class="bi bi-x-lg"></i></button>
+            <div class="aside_logo">
+                <a href="index.html" class="light_logo"><img src="../assets/img_auto/logo.png" alt="logo"></a>
+            </div>
+			<div class="aside_info_inner">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                
+                <div class="aside_info_inner_box">
+                    <h5>Контакты</h5>
+                    <p>+996 456 789 333</p>
+                    <p>Кыргызстан</p>
+                    <p>KBtrade@gmail.com</p>
+
+                </div>
+                <div class="social_sites">
+                    <ul class="d-flex align-items-center justify-content-center">
+                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                        <li><a href="#"><i class="bi bi-telegram"></i></a></li>
+                    </ul>
+                </div>
+			</div>
+		</div>
+
+		<!-- Page Header -->
+        <div class="page_header">
+            <div class="page_header_inner">
+                <div class="container">
+                    <div class="page_header_content d-flex align-items-center justify-content-between">
+                        <h2 class="heading">Этапы</h2>
+                        <ul class="breadcrumb d-flex align-items-center">
+                            <li><a href="index.html">Главная</a></li>
+                            <li class="active">Этапы</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+        
+        <!-- Main Wrapper-->
+        <main class="wrapper">
+            <!-- Scroll Progress -->
+            <section class="project-list-view bg-dark-200">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Lorem ipsum dolor sit.</h2>
+                    </div>
+                    <ol class="project-list">
+                        <li class="project-list-item">
+                            <a href="javascript:void(0)">Этап 1<img src="../assets/img_auto/home1/cc-bmw.png" alt="img" class="hidden-image"></a>
+                        </li>
+                        <li class="project-list-item">
+                            <a href="javascript:void(0)">Этап 2 <img src="../assets/img_auto/home1/cc-merceds.png" alt="img" class="hidden-image"></a>
+                        </li>
+                        <li class="project-list-item">
+                            <a href="javascript:void(0)">Этап 3 <img src="../assets/img_auto/home1/cc-tesla.png" alt="img" class="hidden-image"></a>
+                        </li>
+                        <li class="project-list-item">
+                            <a href="javascript:void(0)">Этап 4 <img src="../assets/img_auto/home1/cc-toyota.png" alt="img" class="hidden-image"></a>
+                        </li>
+                        <li class="project-list-item">
+                            <a href="javascript:void(0)">Этап 5 <img src="../assets/img_auto/home1/cc-sucuki.png" alt="img" class="hidden-image"></a>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="contact_us bg-dark-200">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-5">
+                            <div class="section-header">
+                                <h2 class="text-white text-uppercase mb-4">Оставить заявку на подбор</h2>
+                                <p class="$gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi enim possimus temporibus at odit molestiae eius rerum quis, magnam id aliquam nihil sunt placeat hic blanditiis vitae deleniti necessitatibus adipisci consectetur. Ut at quam beatae!</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="home_contact">
+                                <form action="" method="POST">
+                                    <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="ФИО*" required aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="phone" id="phone" type="number" placeholder="Номер телефона WA или Telegram*" aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="Модель авто" required aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="Тип и объем двигателя" required aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="Цвет" required aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="email" id="email" type="email" placeholder="VIN номер и номер детали" required aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="email" id="email" type="email" placeholder="Комплектация" required aria-label=".form-control-lg example">
+                                    
+                                    <div class="btn_group">
+                                        <button type="submit" class="btn olive">Отправить</button>  
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Section Grid Lines -->
+                <ul class="grid_lines d-none d-md-flex justify-content-between">
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                </ul>
+            </section>
+
+        </main>
+
+        <!-- Footer-->
+        {% include 'include/footer.html' %}
+
+        <div class="totop">
+            <a href="{% url 'stages' %}">↑</a>
+        </div>
+
+        <!-- Page Grid Lines -->
+        <ul class="grid_lines d-none d-md-flex justify-content-between">
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+        </ul>
+
+
+{% endblock %}

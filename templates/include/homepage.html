@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <!-- Meta Tags -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <meta name="author" content="">
+        <!-- Favicon and touch Icons -->
+        <link href="{% static 'assets/img_auto/favicon.png' %}" rel="shortcut icon" type="image/png">
+        <!-- Page Title -->
+        <title>KB Trade</title>    
+        <!-- Styles Include -->
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    </head>
+
+
+    <body class="bg-dark">
+        {% block content %}
+
+        {% endblock %}
+
+        <!-- Core JS -->
+        <script src="{% static 'assets/js/jquery-3.6.0.min.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+
+        
+        
+        <!-- Swiper for Slider Type -->
+        <script src="{% static 'plugins/swiper/swiper-bundle.min.js' %}"></script>
+        
+        <!-- Funfacts -->
+        <script src="{% static 'assets/js/funfacts.js' %}"></script>
+        
+        <!-- Portfolio -->
+        <script src="{% static 'plugins/isotope/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'plugins/isotope/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'plugins/isotope/packery-mode.pkgd.js' %}"></script>
+        <script src="{% static 'plugins/isotope/tilt.jquery.js' %}"></script>
+        <script src="{% static 'plugins/isotope/isotope-init.js' %}"></script>
+        
+        
+
+        <!-- Cursor Effect -->
+        <script src="{% static 'plugins/cursor-effect/cursor-effect.js' %}"></script>
+        
+        <!-- Select2 -->
+        <script src="{% static 'plugins/select2/js/select2.min.js' %}"></script>
+        
+        <!-- AOS effect JS -->
+        <script src="{% static 'plugins/aos/aos.js' %}"></script>
+        
+        <!-- Theme Custom JS -->
+        <script src="{% static 'assets/js/theme.js' %}"></script>
+    </body>
+</html>

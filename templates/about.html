@@ -1,0 +1,403 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner"></div>
+            <div class="loading-text">
+                <span data-preloader-text="K" class="characters">K</span>
+                <span data-preloader-text="B" class="characters">B</span>
+                <span data-preloader-text=" " class="characters"> </span>
+                <span data-preloader-text="T" class="characters">T</span>
+                <span data-preloader-text="R" class="characters">R</span>
+                <span data-preloader-text="A" class="characters">A</span>
+                <span data-preloader-text="D" class="characters">D</span>
+                <span data-preloader-text="E" class="characters">E</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cursor Effect -->
+    <div class="pointer bnz-pointer" id="bnz-pointer"></div>
+
+    <!-- Header -->
+	{% include 'include/header.html' %}
+    <!-- Header End -->
+
+    <!-- Main Wrapper-->
+    <main class="wrapper">
+        <!-- Scroll Progress -->
+
+        <!-- Our Mission -->
+        <section class="mission">
+            <div class="container">
+                <div class="mission_top_part">
+                    <div class="section-header text-center">
+                        <h6 class="text-white text-uppercase">Наша миссия</h6>
+                        <p class="text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam iure
+                            quas similique quia ut labore temporibus sequi odio veniam debitis saepe maiores, illo
+                            cumque tempore placeat consequatur neque asperiores culpa.</p>
+                    </div>
+                    <div class="has_line"></div>
+                    <img src="https://cdn.motor1.com/images/mgl/mLo2o/s1/rolls-royce-cullinan-black-badge.webp" alt="">
+                </div>
+
+                <div class="mission_bottom_part">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 pe-lg-4">
+                            <div class="section-header">
+                                <h3 class="text-white text-uppercase border-line">Lorem, ipsum dolor.</h3>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ps-lg-4">
+                            <div class="mission_content">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat est quo, delectus
+                                    ipsum eos ratione voluptate accusantium esse culpa unde ex ipsa similique, quia
+                                    nostrum recusandae velit iste magnam tempora.</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat est quo, delectus
+                                    ipsum eos ratione voluptate accusantium esse culpa unde ex ipsa similique, quia
+                                    nostrum recusandae velit iste magnam tempora.</p>
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat est quo, delectus
+                                    ipsum eos ratione voluptate accusantium esse culpa unde ex ipsa similique, quia
+                                    nostrum recusandae velit iste magnam tempora.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="video-block" data-aos="zoom-in" data-aos-duration="500">
+            <div class="container">
+                <div class="video_post">
+                    <div class="ytube_video">
+                        <iframe id="ytvideo" src="https://www.youtube.com/embed/fEErySYqItI" allow="autoplay;"
+                            allowfullscreen></iframe>
+                        <div class="post_content">
+                            <div class="ytplay_btn"><i class="bi bi-play-fill"></i></div>
+                            <img src="https://www.rolls-roycemotorcars.com/content/dam/rrmc/marketUK/rollsroycemotorcars_com/3-1-cullinan/page-properties/rolls-royce-cullinan-discover-hero-d.jpg" alt="video">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="funfacts pd-top-lg bg_2" id="funfacts">
+            <div class="container">
+                <div class="row">
+                </div>
+            </div>
+        </section>
+
+        <section class="services inner pb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-duration="500">
+                        <div class="icon_box">
+                            <h6>01</h6>
+                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
+                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
+                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-duration="700">
+                        <div class="icon_box">
+                            <h6>02</h6>
+                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
+                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
+                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-duration="900">
+                        <div class="icon_box">
+                            <h6>03</h6>
+                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
+                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
+                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1100">
+                        <div class="icon_box">
+                            <h6>04</h6>
+                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
+                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
+                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1300">
+                        <div class="icon_box">
+                            <h6>05</h6>
+                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
+                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
+                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="icon_box">
+                            <h6>06</h6>
+                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
+                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
+                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="highlight_banner bg-dark-200">
+            <div class="container">
+                <div class="row justify-content-center" data-aos="flip-up" data-aos-duration="500">
+                    <div class="col-lg-11 p-lg-0">
+                        <p class="about_para text-center">Lorem ipsum dolor <span><a href="about.html">sit amet
+                                </a></span>consectetur adipisicing elit. Ipsa nihil error at non aspernatur <span><a
+                                    href="about.html">accusamus fugit consequuntur aut doloribus?</a></span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Team -->
+        <section class="team">
+            <div class="container">
+                <div class="section-header text-center has_line">
+                    <h1 class="text-white">Наша команда</h1>
+                </div>
+                <div class="team_inner">
+                    <!-- Swiper Team -->
+                    <div class="swiper swiper_team">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="team-block">
+                                    <img src="{% static 'assets/img_auto/team/1.jpg' %}" alt="img">
+                                    <h5 class="text-white"><a href="javascript:void(0)">John Doe</a></h5>
+                                    <h6 class="text-uppercase text-olive">Someone</h6>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="team-block">
+                                    <img src="{% static 'assets/img_auto/team/2.jpg' %}" alt="img">
+                                    <h5 class="text-white"><a href="javascript:void(0)">John Doe</a></h5>
+                                    <h6 class="text-uppercase text-olive">Someone</h6>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="team-block">
+                                    <img src="{% static 'assets/img_auto/team/3.jpg' %}" alt="img">
+                                    <h5 class="text-white"><a href="javascript:void(0)">John Doe</a></h5>
+                                    <h6 class="text-uppercase text-olive">Someone</h6>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="team-block">
+                                    <img src="{% static 'assets/img_auto/team/4.jpg' %}" alt="img">
+                                    <h5 class="text-white"><a href="javascript:void(0)">John Doe</a></h5>
+                                    <h6 class="text-uppercase text-olive">Someone</h6>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="team-block">
+                                    <img src="{% static 'assets/img_auto/team/5.jpg' %}" alt="img">
+                                    <h5 class="text-white"><a href="javascript:void(0)">John Doe</a></h5>
+                                    <h6 class="text-uppercase text-olive">Someone</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <!-- <div class="swiper-pagination"></div> -->
+
+                        <!-- Add Buttons -->
+                        <div class="swiper-navigation">
+                            <div class="swiper-button-prev"><i class="bi bi-arrow-left"></i></div>
+                            <div class="swiper-button-next"><i class="bi bi-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonial box_padding pb-0">
+            <!-- Section Grid Lines -->
+            <ul class="grid_lines d-none d-md-flex justify-content-between">
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+            </ul>
+            <div class="has_line_lg"></div>
+            <div class="testimonial_inner bg-black">
+                <!-- Swiper Testimonial -->
+                <div class="swiper swiper_testimonial">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="testimonial-block text-center">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ulla"</p>
+                                <h6 class="text-olive">John Doe</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block text-center">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ulla"</p>
+                                <h6 class="text-olive">John Doe</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block text-center">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ulla"</p>
+                                <h6 class="text-olive">John Doe</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block text-center">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ulla"</p>
+                                <h6 class="text-olive">John Doe</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block text-center">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ulla"</p>
+                                <h6 class="text-olive">John Doe</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block text-center">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ulla"</p>
+                                <h6 class="text-olive">John Doe</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block text-center">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ulla"</p>
+                                <h6 class="text-olive">John Doe</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block text-center">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ulla"</p>
+                                <h6 class="text-olive">John Doe</h6>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="testimonial-block text-center">
+                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ulla"</p>
+                                <h6 class="text-olive">John Doe</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact_us bg-dark-200">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-5">
+                        <div class="section-header">
+                            <h2 class="text-white text-uppercase mb-4">Оставить заявку на подбор</h2>
+                            <p class="$gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi enim
+                                possimus temporibus at odit molestiae eius rerum quis, magnam id aliquam nihil sunt
+                                placeat hic blanditiis vitae deleniti necessitatibus adipisci consectetur. Ut at quam
+                                beatae!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="home_contact">
+                            <form action="" method="POST">
+                                <input class="form-control form-control-lg" name="name" id="name" type="text"
+                                    placeholder="ФИО*" required aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="phone" id="phone" type="number"
+                                    placeholder="Номер телефона WA или Telegram*" aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="name" id="name" type="text"
+                                    placeholder="Модель авто" required aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="name" id="name" type="text"
+                                    placeholder="Тип и объем двигателя" required aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="name" id="name" type="text"
+                                    placeholder="Цвет" required aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="email" id="email" type="email"
+                                    placeholder="VIN номер и номер детали" required
+                                    aria-label=".form-control-lg example">
+
+                                <input class="form-control form-control-lg" name="email" id="email" type="email"
+                                    placeholder="Комплектация" required aria-label=".form-control-lg example">
+
+                                <div class="btn_group">
+                                    <button type="submit" class="btn olive">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Grid Lines -->
+            <ul class="grid_lines d-none d-md-flex justify-content-between">
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+                <li class="grid_line"></li>
+            </ul>
+        </section>
+
+    </main>
+
+
+    <!-- Footer-->
+    {% include 'include/footer.html' %}
+
+    <div class="totop">
+        <a href="#">↑</a>
+    </div>
+
+    <!-- Page Grid Lines -->
+    <ul class="grid_lines d-none d-md-flex justify-content-between">
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+    </ul>
+
+{% endblock %}

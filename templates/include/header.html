@@ -1,0 +1,83 @@
+{% load static %}
+<header class="header">				
+    <div class="container">
+        <div class="header_inner d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="{% url 'index' %}" class="light_logo"><img src="{% static 'assets/img_auto/logo.png' %}" alt="logo"></a>
+            </div>
+            <div class="mainnav d-none d-lg-block">
+                <ul class="main_menu">
+                    <li class="menu-item active"><a href="{% url 'index' %}">Главная</a></li>
+                    <li class="menu-item"><a href="{% url 'about' %}">О нас</a></li>
+                    <li class="menu-item"><a href="{% url 'benefits' %}">Преимущества</a></li>
+                    <li class="menu-item"><a href="{% url 'stages' %}">Этапы работы</a></li>
+                    <li class="menu-item"><a href="{% url 'contact' %}">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="header_right_part d-flex align-items-center">
+                <button class="aside_open">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Responsive Menu -->
+<div class="mr_menu">
+    <div class="mr_menu_overlay"></div>
+    <button type="button" class="mr_menu_close"><i class="bi bi-x-lg"></i></button>
+    <div class="logo"></div> <!-- Keep this div empty. Logo will come here by JavaScript -->
+    <div class="mr_navmenu"></div> <!-- Keep this div empty. Menu will come here by JavaScript -->
+
+    <!-- Footer-->
+    <footer class="footer p-0">
+        <div class="footer_inner pb-0">
+            <div class="footer_elements d-flex align-items-center justify-content-center">
+                <div class="footer_elements_inner">
+                    <div class="footer_social">
+                        <ul class="social_list justify-content-center">
+                            <li class="facebook"><a href="#"><i class="bi bi-facebook"></i></a></li>
+                            <li class="tiktok"><a href="#"><i class="bi bi-tiktok"></i></a></li>
+                            <li class="instagram"><a href="#"><i class="bi bi-instagram"></i></a></li>
+                            <li class="whatsapp"><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                            <li class="telegram"><a href="#"><i class="bi bi-telegram"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="copyright">
+                        <p>KB Trade 2023. All Rights Reserved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<div class="aside_info_wrapper">
+    <button class="aside_close"><i class="bi bi-x-lg"></i></button>
+    <div class="aside_logo">
+        <a href="{% url 'index' %}" class="light_logo"><img src="{% static 'assets/img_auto/logo.png' %}" alt="logo"></a>
+    </div>
+    <div class="aside_info_inner">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        
+        <div class="aside_info_inner_box">
+            <h5>Контакты</h5>
+            <p>+996 456 789 333</p>
+            <p>Кыргызстан</p>
+            <p>KBtrade@gmail.com</p>
+
+        </div>
+        <div class="social_sites">
+            <ul class="d-flex align-items-center justify-content-center">
+                <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
+                <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+                <li><a href="#"><i class="bi bi-telegram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</div>

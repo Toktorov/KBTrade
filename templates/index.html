@@ -1,0 +1,523 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+        <!-- Preloader -->
+        <div id="preloader">
+			<div class="preloader-inner">
+				<div class="spinner"></div>
+				<div class="loading-text">
+					<span data-preloader-text="K" class="characters">K</span>
+					<span data-preloader-text="B" class="characters">B</span>
+					<span data-preloader-text=" " class="characters"> </span>
+					<span data-preloader-text="T" class="characters">T</span>
+					<span data-preloader-text="R" class="characters">R</span>
+					<span data-preloader-text="A" class="characters">A</span>
+					<span data-preloader-text="D" class="characters">D</span>
+					<span data-preloader-text="E" class="characters">E</span>
+				</div>
+			</div>
+		</div>
+
+        <!-- Cursor Effect -->
+        <!-- <div class="pointer bnz-pointer" id="bnz-pointer"></div> -->
+
+        <!-- Header -->
+		{% include 'include/header.html' %}
+        <!-- Header End -->
+
+        
+        <!-- Main Wrapper-->
+        <main class="wrapper">
+            <div class="theme_slider bg-black">
+                <div class="container">
+                    <div class="swiper swiper_theme_slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slider" style="background-image: url('https://www.bmw.kg/content/dam/bmw/common/all-models/x-series/x7/2022/highlights/bmw-x-series-x7-sp-desktop.jpg')">
+                                    <div class="slide_content">
+                                        <div class="slide_content_wrapper mb-0 h-auto bg-dark-100">
+                                            <div class="slide_content_inner">
+                                                <div class="meta m-0">
+                                                    <div class="category text-olive text-uppercase">BMW X7</div>
+                                                </div>
+                                                <h4><a href="project-details.html" class="text-white">BMW X7 2022 года от 90000$</a></h4>
+                                                <div class="details_link">
+                                                    <a href="project-details.html">
+                                                        <span class="link_text">Подробнее</span> 
+                                                        <span class="link_icon">
+                                                            <span class="line"></span> 
+                                                            <span class="circle"></span>
+                                                            <span class="dot"></span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="slider" style="background-image: url('https://s7d1.scene7.com/is/image/hyundai/2022-sonata-1?wid=1200&hei=630&qlt=85,0&fmt=webp')">
+                                    <div class="slide_content">
+                                        <div class="slide_content_wrapper mb-0 h-auto bg-dark-100">
+                                            <div class="slide_content_inner">
+                                                <div class="meta m-0">
+                                                    <div class="category text-olive text-uppercase">Hyundai Sonata</div>
+                                                </div>
+                                                <h4><a href="project-details.html" class="text-white">Hyundai Sonata 2020 от 15000$</a></h4>
+                                                <div class="details_link">
+                                                    <a href="project-details.html">
+                                                        <span class="link_text">Подробнее</span> 
+                                                        <span class="link_icon">
+                                                            <span class="line"></span> 
+                                                            <span class="circle"></span>
+                                                            <span class="dot"></span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="slider" style="background-image: url('https://scene7.toyota.eu/is/image/toyotaeurope/my23es32?&wid=1280&fit=fit,1&ts=1666940663229&resMode=sharp2&op_usm=1.75,0.3,2,0')">
+                                    <div class="slide_content">
+                                        <div class="slide_content_wrapper mb-0 h-auto bg-dark-100">
+                                            <div class="slide_content_inner">
+                                                <div class="meta m-0">
+                                                    <div class="category text-olive text-uppercase">Lexus ES</div>
+                                                </div>
+                                                <h4><a href="project-details.html" class="text-white">Lexus ES 2022 года от 35000$</a></h4>
+                                                <div class="details_link">
+                                                    <a href="project-details.html">
+                                                        <span class="link_text">Подробнее</span> 
+                                                        <span class="link_icon">
+                                                            <span class="line"></span> 
+                                                            <span class="circle"></span>
+                                                            <span class="dot"></span>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- Add Buttons -->
+                        <div class="swiper-navigation">
+                            <div class="swiper-button-prev"><i class="bi bi-arrow-left"></i></div>
+                            <div class="swiper-button-next"><i class="bi bi-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider_bg bg-dark-100"></div>
+            </div>
+
+            <section class="about bg-dark-100">
+                <div class="large_font">
+                    <h2 class="floating_element text-dark-200 d-flex justify-content-center" data-aos="fade-right" data-aos-duration="1000">О нас</h2>
+                </div>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-md-5">
+                            <div class="about_image">
+                                <img src="https://scene7.toyota.eu/is/image/toyotaeurope/my23es32?&wid=1280&fit=fit,1&ts=1666940663229&resMode=sharp2&op_usm=1.75,0.3,2,0" alt="img">
+                                <img src="{% static 'assets/img_auto/e1.svg' %}" alt="About" data-aos="fade-down" data-aos-duration="1000">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-7">
+                            <div class="about_text_inner">
+                                <div class="about_text">
+                                    <h2 class="text-white">О нас</h2>
+                                    <p>Компания «KB TRADE CO LTD» предоставляют услуги по подбору, покупке и импорту авто из США, Грузии, Кореи и Китая! Для вас доступен комплекс услуг, связанных с доставкой и покупкой автомобилей из США, Китая и Кореи через Кыргызстан в страны Евразийского экономического союза (ЕАЭС). Нам можно доверять — мы официальные представители Lion Trans Company в Кыргызстане и Казахстане, и являемся единственными официальными брокерами Copart в этих странах.
+                                        Мы также предоставляем постоянным клиентам специальные скидки. Сотрудничая с нами, вы можете быть уверены в надежной и профессиональной поддержке на каждом этапе вашей сделки.
+                                        Если вы хотите узнать больше о наших услугах, мы приглашаем вас подробнее ознакомиться на нашем веб-сайте.</p>
+                                </div>
+
+                                <div class="about_icon_box">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="icon_box_flex">
+                                                <div class="icon_size">
+                                                    <img src="{% static 'assets/img_auto/about/i2.svg' %}" alt="Icon">
+                                                </div>
+                                                <h6>Lorem 1</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="icon_box_flex">
+                                                <div class="icon_size">
+                                                    <img src="{% static 'assets/img_auto/about/i3.svg' %}" alt="Icon">
+                                                </div>
+                                                <h6>Lorem 2</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="icon_box_flex">
+                                                <div class="icon_size">
+                                                    <img src="{% static 'assets/img_auto/about/i1.svg' %}" alt="Icon">
+                                                </div>
+                                                <h6>Lorem 3</h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="icon_box_flex">
+                                                <div class="icon_size">
+                                                    <img src="{% static 'assets/img_auto/about/i4.svg' %}" alt="Icon">
+                                                </div>
+                                                <h6>Lorem 4</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn_group" data-aos="fade-down" data-aos-duration="1000">
+                                    <a href="about.html" class="btn gray">Подробнее</a>  
+                                </div>
+                            </div>
+                                                
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="funfacts bg_1" id="funfacts">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="funfacts_inner">
+                                <div class="funfact2 d-flex align-items-center">
+                                    <div class="fun_img">
+                                        <img src="{% static 'assets/img_auto/fact-1.png' %}" alt="img">
+                                    </div>
+                                    <div class="funfact_content">
+                                        <p>Text</p>
+                                        <div class="d-flex align-items-center"><h2 class="fun-number">120</h2></div>                                
+                                    </div>
+                                </div>                            
+                                <div class="funfact2 d-flex align-items-center">
+                                    <div class="fun_img">
+                                        <img src="{% static 'assets/img_auto/fact-2.png' %}" alt="img">
+                                    </div>
+                                    <div class="funfact_content">
+                                        <p>Text</p>
+                                        <div class="d-flex align-items-center"><h2 class="fun-number">210</h2><span>+</span></div>
+                                    </div>
+                                </div>                            
+                                <div class="funfact2 d-flex align-items-center">
+                                    <div class="fun_img">
+                                        <img src="{% static 'assets/img_auto/fact-3.png' %}" alt="img">
+                                    </div>
+                                    <div class="funfact_content">
+                                        <p>Text</p>
+                                        <div class="d-flex align-items-center"><h2 class="fun-number">15</h2></div>
+                                    </div>
+                                </div>                            
+                                <div class="funfact2 d-flex align-items-center">
+                                    <div class="fun_img">
+                                        <img src="{% static 'assets/img_auto/fact-4.png' %}" alt="img">
+                                    </div>
+                                    <div class="funfact_content">
+                                        <p>Text</p>
+                                        <div class="d-flex align-items-center"><h2 class="fun-number">62</h2></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="projects masonry bg-transparent effect-tilt p-0">
+                <div class="container">
+                    <div class="grid grid-2 gutter-90 clearfix"> 
+                        <div class="grid-sizer"></div>                          
+                        <div class="grid-item residences" data-aos="fade-up" data-aos-duration="700">
+                            <div class="thumb">
+                                <img class="item_image first" src="https://cdn.motor1.com/images/mgl/mLo2o/s1/rolls-royce-cullinan-black-badge.webp" alt="">
+                                <div class="works-info">
+                                    <div class="label-text">
+                                        <h5><a href="project-details.html">Машина 1</a></h5>
+                                        <h6><a href="index-6.html#">Подробнее</a></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                          
+                        <div class="grid-item interiors" data-aos="fade-up" data-aos-duration="900"> 
+                            <div class="thumb">
+                                <img class="item_image" src="https://img.mercedes-benz-kiev.com/data/lineup/mercedes-benz-s-class-limousine-wv223-2021/mercedes-benz-s-class-wv223-8.jpg" alt="">
+                                <div class="works-info">
+                                    <div class="label-text">
+                                        <h5><a href="project-details.html">Машина 2</a></h5>
+                                        <h6><a href="index-6.html#">Подробнее</a></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                        <div class="grid-item residences" data-aos="fade-up" data-aos-duration="700"> 
+                            <div class="thumb">
+                                <img class="item_image" src="https://cdn.motor1.com/images/mgl/m7o3r/s1/2022-lexus-lx-600.jpg" alt="">
+                                <div class="works-info">
+                                    <div class="label-text">
+                                        <h5><a href="project-details.html">Машина 3</a></h5>
+                                        <h6><a href="index-6.html#">Подробнее</a></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                        <div class="grid-item landscape exterior" data-aos="fade-up" data-aos-duration="700"> 
+                            <div class="thumb">
+                                <img class="item_image" src="https://www.ixbt.com/img/n1/news/2022/4/2/Toyota-Land-Cruiser-Widebody-By-KHANN-International-New-1_large.jpg" alt="">
+                                <div class="works-info">
+                                    <div class="label-text">
+                                        <h5><a href="project-details.html">Машина 4</a></h5>
+                                        <h6><a href="index-6.html#">Подробнее</a></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                        <div class="grid-item landscape" data-aos="fade-up" data-aos-duration="700"> 
+                            <div class="thumb">
+                                <img class="item_image" src="https://avatars.mds.yandex.net/get-verba/1540742/2a0000017c08e9c8163e2a95c50859b5651b/cattouchret" alt="">
+                                <div class="works-info">
+                                    <div class="label-text">
+                                        <h5><a href="project-details.html">Машина 5</a></h5>
+                                        <h6><a href="index-6.html#">Подробнее</a></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                      
+                        <div class="grid-item interiors" data-aos="fade-up" data-aos-duration="700">
+                            <div class="thumb">
+                                <img class="item_image" src="https://leasing.express/wp-content/uploads/2021/10/IMG_2467-scaled.jpg" alt="">
+                                <div class="works-info">
+                                    <div class="label-text">
+                                        <h5><a href="project-details.html">Машина 6</a></h5>
+                                        <h6><a href="index-6.html#">Подробнее</a></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                          
+                        <div class="grid-item interiors" data-aos="fade-up" data-aos-duration="700"> 
+                            <div class="thumb">
+                                <img class="item_image last" src="https://www.vedanta.com.ua/wp-content/uploads/2019/07/KMHE341DBHA295878-1.jpeg" alt="">
+                                <div class="works-info">
+                                    <div class="label-text">
+                                        <h5><a href="project-details.html">Машина 7</a></h5>
+                                        <h6><a href="index-6.html#">Подробнее</a></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </section>
+
+            <section class="testimonial box_padding pb-0">
+                <!-- Section Grid Lines -->
+                <ul class="grid_lines d-none d-md-flex justify-content-between">
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                </ul>
+                <div class="has_line_lg"></div>
+                <div class="testimonial_inner bg-black">
+                    <!-- Swiper Testimonial -->
+                    <div class="swiper swiper_testimonial">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testimonial-block text-center">
+                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
+                                    <h6 class="text-olive">John Doe</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-block text-center">
+                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
+                                    <h6 class="text-olive">John Doe</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-block text-center">
+                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
+                                    <h6 class="text-olive">John Doe</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-block text-center">
+                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
+                                    <h6 class="text-olive">John Doe</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-block text-center">
+                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
+                                    <h6 class="text-olive">John Doe</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-block text-center">
+                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
+                                    <h6 class="text-olive">John Doe</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-block text-center">
+                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
+                                    <h6 class="text-olive">John Doe</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-block text-center">
+                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
+                                    <h6 class="text-olive">John Doe</h6>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testimonial-block text-center">
+                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
+                                    <h6 class="text-olive">John Doe</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="blog pt-lg bg-dark-100">
+                <div class="large_font">
+                    <h2 class="floating_element text-dark-200 d-flex justify-content-center">Новости</h2>
+                </div>
+                <div class="container">
+                    <div class="section-header text-center has_line">
+                        <h2 class="text-white">Новости</h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog_post mb-0">
+                                <img src="{% static 'assets/img_auto/home3/mercedes.pn' %}g" alt="img">
+                                <div class="blog_content">                                    
+                                    <h2 class="post-count">01</h2>
+                                    <div class="meta">
+                                        <time class="text-olive" datetime="2023-09-03">11 Сентября, 2023</time>
+                                    </div>
+                                    <h5><a href="blog-details.html" class="text-white">Новость 1</a></h5>
+                                    <p>Lorem ipsum dolor sit amet consecteur adipiscing elitsed do eiusmod tempor incididunt labo dolore magnaaliqua. Ut eni ad minim veniam dolor sit amet consecteur.....</p>
+                                    <div class="details_link"><a href="blog-details.html"><span class="link_text">Подробнее</span> <span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog_post mb-0">
+                                <img src="{% static 'assets/img_auto/home3/suzuki2.png' %}" alt="img">
+                                <div class="blog_content">                                    
+                                    <h2 class="post-count">02</h2>
+                                    <div class="meta">
+                                        <time class="text-olive" datetime="2023-09-03">11 Сентября, 2023</time>
+                                    </div>
+                                    <h5><a href="blog-details.html" class="text-white">Новость 2</a></h5>
+                                    <p>Lorem ipsum dolor sit amet consecteur adipiscing elitsed do eiusmod tempor incididunt labo dolore magnaaliqua. Ut eni ad minim veniam dolor sit amet consecteur.....</p>
+                                    <div class="details_link"><a href="blog-details.html"><span class="link_text">Подробнее</span> <span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="blog_post mb-0">
+                                <img src="{% static 'assets/img_auto/home3/tesla2.png' %} alt="img">
+                                <div class="blog_content">                                    
+                                    <h2 class="post-count">03</h2>
+                                    <div class="meta">
+                                        <time class="text-olive" datetime="2023-09-03">11 Сентября, 2023</time>
+                                    </div>
+                                    <h5><a href="blog-details.html" class="text-white">Новость 3</a></h5>
+                                    <p>Lorem ipsum dolor sit amet consecteur adipiscing elitsed do eiusmod tempor incididunt labo dolore magnaaliqua. Ut eni ad minim veniam dolor sit amet consecteur.....</p>
+                                    <div class="details_link"><a href="blog-details.html"><span class="link_text">Подробнее</span> <span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contact_us bg-dark-200">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-5">
+                            <div class="section-header">
+                                <h2 class="text-white text-uppercase mb-4">Оставить заявку на подбор</h2>
+                                <p class="$gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi enim possimus temporibus at odit molestiae eius rerum quis, magnam id aliquam nihil sunt placeat hic blanditiis vitae deleniti necessitatibus adipisci consectetur. Ut at quam beatae!</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="home_contact">
+                                <form action="" method="POST">
+                                    <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="ФИО*" required aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="phone" id="phone" type="number" placeholder="Номер телефона WA или Telegram*" aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="Модель авто" required aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="Тип и объем двигателя" required aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="Цвет" required aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="email" id="email" type="email" placeholder="VIN номер и номер детали" required aria-label=".form-control-lg example">
+
+                                    <input class="form-control form-control-lg" name="email" id="email" type="email" placeholder="Комплектация" required aria-label=".form-control-lg example">
+                                    
+                                    <div class="btn_group">
+                                        <button type="submit" class="btn olive">Отправить</button>  
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Section Grid Lines -->
+                <ul class="grid_lines d-none d-md-flex justify-content-between">
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                    <li class="grid_line"></li>
+                </ul>
+            </section>
+
+        </main>
+
+        <!-- Footer-->
+        {% include 'include/footer.html' %}
+
+        <div class="totop">
+            <a href="#">↑</a>
+        </div>
+
+        <!-- Section Grid Lines -->
+        <ul class="grid_lines d-none d-md-flex justify-content-between">
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+        </ul>
+        
+
+{% endblock %}
