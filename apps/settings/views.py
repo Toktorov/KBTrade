@@ -1,11 +1,14 @@
 from django.shortcuts import render
 
 from apps.settings.models import Setting, News
+from apps.cars.models import Car, CarImage
 
 # Create your views here.
 def index(request):
     setting = Setting.objects.latest('id')
     news = News.objects.all()
+    random_cars = Car.objects.all().order_by('?')[:3]
+    cars = Car.objects.all()
     return render(request, 'index.html', locals())
 
 def about(request):

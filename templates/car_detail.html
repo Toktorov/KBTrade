@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="zxx">
-
-<head>
-    <!-- Meta Tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <meta name="description" content="Mrittik is a Modern Architecture Theme">
-    <meta name="author" content="">
-
-    <!-- Favicon and touch Icons -->
-    <link href="../assets/img_auto/favicon.png" rel="shortcut icon" type="image/png">
-    <!-- Page Title -->
-    <title>KB TRADE - Инфо машина</title>
-
-    <!-- Styles Include -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-
-</head>
-
-
-<body class="bg-dark">
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
 
     <!-- Preloader -->
     <div id="preloader">
@@ -44,99 +24,18 @@
     <div class="pointer bnz-pointer" id="bnz-pointer"></div>
 
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header_inner d-flex align-items-center justify-content-between">
-                <div class="logo">
-                    <a href="index.html" class="light_logo"><img src="../assets/img_auto/logo.png" alt="logo"></a>
-                </div>
-                <div class="mainnav d-none d-lg-block">
-                    <ul class="main_menu">
-                        <li class="menu-item"><a href="index.html">Главная</a></li>
-                        <li class="menu-item"><a href="about.html">О нас</a></li>
-                        <li class="menu-item"><a href="benefits.html">Преимущества</a></li>
-                        <li class="menu-item"><a href="stages.html">Этапы работы</a></li>
-                        <li class="menu-item"><a href="faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="header_right_part d-flex align-items-center">
-                    <button class="aside_open">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Mobile Responsive Menu -->
-    <div class="mr_menu">
-        <div class="mr_menu_overlay"></div>
-        <button type="button" class="mr_menu_close"><i class="bi bi-x-lg"></i></button>
-        <div class="logo"></div> <!-- Keep this div empty. Logo will come here by JavaScript -->
-        <div class="mr_navmenu"></div> <!-- Keep this div empty. Menu will come here by JavaScript -->
-
-        <!-- Footer-->
-        <footer class="footer p-0">
-            <div class="footer_inner pb-0">
-                <div class="footer_elements d-flex align-items-center justify-content-center">
-                    <div class="footer_elements_inner">
-                        <div class="footer_social">
-                            <ul class="social_list justify-content-center">
-                                <li class="facebook"><a href="#"><i class="bi bi-facebook"></i></a></li>
-                                <li class="tiktok"><a href="#"><i class="bi bi-tiktok"></i></a></li>
-                                <li class="instagram"><a href="#"><i class="bi bi-instagram"></i></a></li>
-                                <li class="whatsapp"><a href="#"><i class="bi bi-whatsapp"></i></a></li>
-                                <li class="telegram"><a href="#"><i class="bi bi-telegram"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="copyright">
-                            <p>KB Trade 2023. All Rights Reserved</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <div class="aside_info_wrapper">
-        <button class="aside_close"><i class="bi bi-x-lg"></i></button>
-        <div class="aside_logo">
-            <a href="index.html" class="light_logo"><img src="../assets/img_auto/logo.png" alt="logo"></a>
-        </div>
-        <div class="aside_info_inner">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-            <div class="aside_info_inner_box">
-                <h5>Контакты</h5>
-                <p>+996 456 789 333</p>
-                <p>Кыргызстан</p>
-                <p>KBtrade@gmail.com</p>
-
-            </div>
-            <div class="social_sites">
-                <ul class="d-flex align-items-center justify-content-center">
-                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                    <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
-                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                    <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
-                    <li><a href="#"><i class="bi bi-telegram"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    {% include 'include/header.html' %}
 
     <!-- Page Header -->
     <div class="page_header">
         <div class="page_header_inner">
             <div class="container">
                 <div class="page_header_content d-flex align-items-center justify-content-between">
-                    <h2 class="heading">Инфо о машине</h2>
+                    <h2 class="heading">{{ car.make }} {{ car.model }} {{ car.year }}</h2>
                     <ul class="breadcrumb d-flex align-items-center">
-                        <li><a href="index.html">Главная</a></li>
-                        <li><a href="cars.html">Машины</a></li>
-                        <li class="active">Инфо о машине</li>
+                        <li><a href="{% url 'index' %}">Главная</a></li>
+                        <li><a href="{% url 'index' %}">Машины</a></li>
+                        <li class="active">{{ car.make }} {{ car.model }} {{ car.year }}</li>
                     </ul>
                 </div>
             </div>
@@ -152,24 +51,23 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-8">
                         <div class="post-image">
-                            <img src="../assets/img_auto/home5/home5-banner-img-02.png" alt="image">
+                            <img src="{{ car.car_images.all.0.image.url }}" alt="image">
                         </div>
                         <div class="project-details_inner">
                             <div class="post_content">
                                 <div class="post-header">
-                                    <h3 class="post-title">Lorem, ipsum dolor.</h3>
+                                    <h3 class="post-title">{{ car.make }} {{ car.model }} {{ car.year }}</h3>
                                 </div>
                                 <div class="fulltext">
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. A consequuntur vero
-                                        magni deleniti rem. Labore, nam animi similique voluptate tempora distinctio
-                                        ducimus. Optio nulla fuga debitis assumenda! Nesciunt, quam ullam?
+                                        Автомобиль {{ car.make }} {{ car.model }} {{ car.year }} года, с пробегом {{ car.odometer }} км, местонахождение - город Корея. Автомобиль будет продан с онлайн аукциона, дата торгов 2023-09-20 07:00, по Бишкекскому времени.
+                                        Если Вам понравился автомобиль, и Вы хотите принять участие в аукционе, отправьте запрос через форму связи или предложите ставку (форма «Предложить ставку»), и мы свяжемся с Вами в кратчайшие сроки для уточнения всех деталей. Внимание! Предложение ставки не накладывает на Вас никаких обязательств. Отправив запрос на участие в онлайн торгах, Вы лишь показываете свою заинтересованность в покупке автомобиля. Решение о приобретении авто Вы примите только после общения с менеджером компании {{ setting.title }} и после подписания договора. Подробнее о покупке авто в США читайте на этой странице.
                                     </p>
                                     <figure class="block-gallery mb-0">
                                         <ul class="blocks-gallery-grid">
                                             <li class="blocks-gallery-item mb-0 me-0">
                                                 <figure>
-                                                    <img src="../assets/img_auto/home5/home5-banner-img-01.png"
+                                                    <img src="{% static 'assets/img_auto/home5/home5-banner-img-01.png' %}"
                                                         alt="img" class="block-image">
                                                 </figure>
                                             </li>
@@ -196,28 +94,28 @@
                                         <ul class="blocks-gallery-grid">
                                             <li class="blocks-gallery-item">
                                                 <figure>
-                                                    <img src="../assets/img_auto/home5/home5-banner-img-01.png"
+                                                    <img src="{% static 'assets/img_auto/home5/home5-banner-img-01.png' %}"
                                                         alt="img" class="block-image">
                                                     <div class="popup-btn"><a
-                                                            href="../assets/img_auto/home5/home5-banner-img-01.png"
+                                                            href="{% static 'assets/img_auto/home5/home5-banner-img-01.png' %}"
                                                             data-fancybox="images"><i class="bi bi-plus"></i></a></div>
                                                 </figure>
                                             </li>
                                             <li class="blocks-gallery-item">
                                                 <figure>
-                                                    <img src="../assets/img_auto/home5/home5-banner-img-02.png"
+                                                    <img src="{% static 'assets/img_auto/home5/home5-banner-img-02.png' %}"
                                                         alt="img" class="block-image">
                                                     <div class="popup-btn"><a
-                                                            href="../assets/img_auto/home5/home5-banner-img-02.png"
+                                                            href="{% static 'assets/img_auto/home5/home5-banner-img-02.png' %}"
                                                             data-fancybox="images"><i class="bi bi-plus"></i></a></div>
                                                 </figure>
                                             </li>
                                             <li class="blocks-gallery-item">
                                                 <figure>
-                                                    <img src="../assets/img_auto/home5/home5-banner-img-03.png"
+                                                    <img src="{% static 'assets/img_auto/home5/home5-banner-img-03.png' %}"
                                                         alt="img" class="block-image">
                                                     <div class="popup-btn"><a
-                                                            href="../assets/img_auto/home5/home5-banner-img-03.png"
+                                                            href="{% static 'assets/img_auto/home5/home5-banner-img-03.png' %}"
                                                             data-fancybox="images"><i class="bi bi-plus"></i></a></div>
                                                 </figure>
                                             </li>
@@ -250,21 +148,32 @@
                                 </h6>
                                 <ul>
                                     <li>
-                                        <span class="data">Руль:</span> <span class="value">Левы</span>
+                                        <span class="data">Марка:</span> <span class="value">{{ car.make }}</span>
                                     </li>
                                     <li>
-                                        <span class="data">Info heading:</span> <span class="value">Info text</span>
+                                        <span class="data">Модель:</span> <span class="value">{{ car.model }}</span>
                                     </li>
                                     <li>
-                                        <span class="data">Info heading:</span> <span class="value">Info text</span>
+                                        <span class="data">Год выпуска:</span> <span class="value">{{ car.year }}</span>
                                     </li>
                                     <li>
-                                        <span class="data">Info heading:</span> <span class="value">Info text</span>
+                                        <span class="data">Цвет:</span> <span class="value">{{ car.color }}</span>
                                     </li>
                                     <li>
-                                        <span class="data">Info heading:</span> <span class="value">Info text</span>
+                                        <span class="data">Двигатель:</span> <span class="value">{{ car.car_volume }}</span>
                                     </li>
-
+                                    <li>
+                                        <span class="data">Пробег:</span> <span class="value">{{ car.odometer }}</span>
+                                    </li>
+                                    <li>
+                                        <span class="data">Трансмиссия:</span> <span class="value">{{ car.gearbox }}</span>
+                                    </li>
+                                    <li>
+                                        <span class="data">Привод:</span> <span class="value">{{ car.drive_unit }}</span>
+                                    </li>
+                                    <li>
+                                        <span class="data">Кузов:</span> <span class="value">{{ car.drive_unit }}</span>
+                                    </li>
                                 </ul>
 
                                 <div class="project-share">
@@ -424,42 +333,4 @@
         <li class="grid_line"></li>
     </ul>
 
-    <!-- Core JS -->
-    <script src="../assets/js/jquery-3.6.0.min.js"></script>
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
-
-
-
-    <!-- Swiper for Slider Type -->
-    <script src="../plugins/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Funfacts -->
-    <!-- <script src="../assets/js/funfacts.js"></script> -->
-
-    <!-- Portfolio -->
-    <script src="../plugins/isotope/isotope.pkgd.min.js"></script>
-    <script src="../plugins/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="../plugins/isotope/packery-mode.pkgd.js"></script>
-    <script src="../plugins/isotope/tilt.jquery.js"></script>
-    <script src="../plugins/isotope/isotope-init.js"></script>
-
-    <!-- Fancybox -->
-    <script src="../plugins/fancybox/jquery.fancybox.min.js"></script>
-    <script src="../plugins/fancybox/fancybox-init.js"></script>
-
-
-
-    <!-- Cursor Effect -->
-    <script src="../plugins/cursor-effect/cursor-effect.js"></script>
-
-    <!-- Select2 -->
-    <script src="../plugins/select2/js/select2.min.js"></script>
-
-    <!-- AOS effect JS -->
-    <script src="../plugins/aos/aos.js"></script>
-
-    <!-- Theme Custom JS -->
-    <script src="../assets/js/theme.js"></script>
-</body>
-
-</html>
+{% endblock %}

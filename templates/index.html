@@ -19,7 +19,7 @@
 		</div>
 
         <!-- Cursor Effect -->
-        <!-- <div class="pointer bnz-pointer" id="bnz-pointer"></div> -->
+        <div class="pointer bnz-pointer" id="bnz-pointer"></div>
 
         <!-- Header -->
 		{% include 'include/header.html' %}
@@ -32,17 +32,18 @@
                 <div class="container">
                     <div class="swiper swiper_theme_slider">
                         <div class="swiper-wrapper">
+                            {% for car in random_cars %}
                             <div class="swiper-slide">
-                                <div class="slider" style="background-image: url('https://www.bmw.kg/content/dam/bmw/common/all-models/x-series/x7/2022/highlights/bmw-x-series-x7-sp-desktop.jpg')">
+                                <div class="slider" style="background-image: url('{{ car.car_images.all.0.image.url }}')">
                                     <div class="slide_content">
                                         <div class="slide_content_wrapper mb-0 h-auto bg-dark-100">
                                             <div class="slide_content_inner">
                                                 <div class="meta m-0">
-                                                    <div class="category text-olive text-uppercase">BMW X7</div>
+                                                    <div class="category text-olive text-uppercase">KB TRADE</div>
                                                 </div>
-                                                <h4><a href="project-details.html" class="text-white">BMW X7 2022 года от 90000$</a></h4>
+                                                <h4><a href="{% url 'car_detail' car.id %}" class="text-white">{{ car.make }} {{ car.model }} {{ car.year }}</a></h4>
                                                 <div class="details_link">
-                                                    <a href="project-details.html">
+                                                    <a href="{% url 'car_detail' car.id %}">
                                                         <span class="link_text">Подробнее</span> 
                                                         <span class="link_icon">
                                                             <span class="line"></span> 
@@ -56,56 +57,7 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="swiper-slide">
-                                <div class="slider" style="background-image: url('https://s7d1.scene7.com/is/image/hyundai/2022-sonata-1?wid=1200&hei=630&qlt=85,0&fmt=webp')">
-                                    <div class="slide_content">
-                                        <div class="slide_content_wrapper mb-0 h-auto bg-dark-100">
-                                            <div class="slide_content_inner">
-                                                <div class="meta m-0">
-                                                    <div class="category text-olive text-uppercase">Hyundai Sonata</div>
-                                                </div>
-                                                <h4><a href="project-details.html" class="text-white">Hyundai Sonata 2020 от 15000$</a></h4>
-                                                <div class="details_link">
-                                                    <a href="project-details.html">
-                                                        <span class="link_text">Подробнее</span> 
-                                                        <span class="link_icon">
-                                                            <span class="line"></span> 
-                                                            <span class="circle"></span>
-                                                            <span class="dot"></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="slider" style="background-image: url('https://scene7.toyota.eu/is/image/toyotaeurope/my23es32?&wid=1280&fit=fit,1&ts=1666940663229&resMode=sharp2&op_usm=1.75,0.3,2,0')">
-                                    <div class="slide_content">
-                                        <div class="slide_content_wrapper mb-0 h-auto bg-dark-100">
-                                            <div class="slide_content_inner">
-                                                <div class="meta m-0">
-                                                    <div class="category text-olive text-uppercase">Lexus ES</div>
-                                                </div>
-                                                <h4><a href="project-details.html" class="text-white">Lexus ES 2022 года от 35000$</a></h4>
-                                                <div class="details_link">
-                                                    <a href="project-details.html">
-                                                        <span class="link_text">Подробнее</span> 
-                                                        <span class="link_icon">
-                                                            <span class="line"></span> 
-                                                            <span class="circle"></span>
-                                                            <span class="dot"></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
@@ -237,19 +189,21 @@
             <section class="projects masonry bg-transparent effect-tilt p-0">
                 <div class="container">
                     <div class="grid grid-2 gutter-90 clearfix"> 
-                        <div class="grid-sizer"></div>                          
+                        <div class="grid-sizer"></div>       
+                        {% for car in cars %}                   
                         <div class="grid-item residences" data-aos="fade-up" data-aos-duration="700">
                             <div class="thumb">
-                                <img class="item_image first" src="https://cdn.motor1.com/images/mgl/mLo2o/s1/rolls-royce-cullinan-black-badge.webp" alt="">
+                                <a href="{% url 'car_detail' car.id %}"><img class="item_image first" src="{{ car.car_images.all.0.image.url }}" alt=""></a>
                                 <div class="works-info">
                                     <div class="label-text">
-                                        <h5><a href="project-details.html">Машина 1</a></h5>
-                                        <h6><a href="index-6.html#">Подробнее</a></h6>
+                                        <h5><a href="project-details.html">{{ car.make }} {{ car.model }} {{ car.year }}</a></h5>
+                                        <h6><a href="{% url 'car_detail' car.id %}">Подробнее</a></h6>
                                     </div>
                                 </div>
                             </div>
-                        </div>                          
-                        <div class="grid-item interiors" data-aos="fade-up" data-aos-duration="900"> 
+                        </div>    
+                        {% endfor %}                      
+                        <!-- <div class="grid-item interiors" data-aos="fade-up" data-aos-duration="900"> 
                             <div class="thumb">
                                 <img class="item_image" src="https://img.mercedes-benz-kiev.com/data/lineup/mercedes-benz-s-class-limousine-wv223-2021/mercedes-benz-s-class-wv223-8.jpg" alt="">
                                 <div class="works-info">
@@ -314,7 +268,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> 
+                        </div>  -->
                     </div>
                 </div>
             </section>
