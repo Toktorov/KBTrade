@@ -7,5 +7,5 @@ from apps.cars.models import Car, CarImage
 def car_detail(request, id):
     setting = Setting.objects.latest('id')
     car = Car.objects.get(id = id)
-    images = CarImage.objects.get(car = id)
+    images = CarImage.objects.filter(car = id)
     return render(request, 'car_detail.html', locals())

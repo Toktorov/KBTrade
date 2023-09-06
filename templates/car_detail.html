@@ -63,66 +63,44 @@
                                         Автомобиль {{ car.make }} {{ car.model }} {{ car.year }} года, с пробегом {{ car.odometer }} км, местонахождение - город Корея. Автомобиль будет продан с онлайн аукциона, дата торгов 2023-09-20 07:00, по Бишкекскому времени.
                                         Если Вам понравился автомобиль, и Вы хотите принять участие в аукционе, отправьте запрос через форму связи или предложите ставку (форма «Предложить ставку»), и мы свяжемся с Вами в кратчайшие сроки для уточнения всех деталей. Внимание! Предложение ставки не накладывает на Вас никаких обязательств. Отправив запрос на участие в онлайн торгах, Вы лишь показываете свою заинтересованность в покупке автомобиля. Решение о приобретении авто Вы примите только после общения с менеджером компании {{ setting.title }} и после подписания договора. Подробнее о покупке авто в США читайте на этой странице.
                                     </p>
-                                    <figure class="block-gallery mb-0">
+                                    <!-- <figure class="block-gallery mb-0">
                                         <ul class="blocks-gallery-grid">
                                             <li class="blocks-gallery-item mb-0 me-0">
                                                 <figure>
-                                                    <img src="{% static 'assets/img_auto/home5/home5-banner-img-01.png' %}"
+                                                    <img src="{{ car.car_images.all.0.image.url }}"
                                                         alt="img" class="block-image">
                                                 </figure>
                                             </li>
                                         </ul>
-                                    </figure>
+                                    </figure> -->
 
                                     <h6 class="widget-title">
-                                        Lorem ipsum dolor sit.
+                                        Почему нужно заказывать у нас?
                                         <span class="title-line"></span>
                                     </h6>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio fugit incidunt
-                                        molestiae quisquam, modi nostrum. Aperiam, assumenda magnam! Est ex quidem
-                                        quaerat enim velit facere quibusdam? Rerum quia facere cumque!</p>
+                                    <p>{{ setting.description }}</p>
                                     <ul class="point_order">
-                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis a
-                                            mollitia officiis neque reiciendis.</li>
-                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis a
-                                            mollitia officiis neque reiciendis.</li>
-                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis a
-                                            mollitia officiis neque reiciendis.</li>
+                                        <li>Команда опытных профессионалов, которые могут помочь вам найти идеальный автомобиль для ваших нужд.</li>
+                                        <li>Мы предлагаем бесплатный осмотр вашего автомобиля перед покупкой, чтобы убедиться, что он в хорошем состоянии.</li>
+                                        <li>Быстро и надежно доставим ваш товар</li>
                                     </ul>
-
                                     <figure class="block-gallery">
                                         <ul class="blocks-gallery-grid">
+                                            {% for image in images %}
                                             <li class="blocks-gallery-item">
                                                 <figure>
-                                                    <img src="{% static 'assets/img_auto/home5/home5-banner-img-01.png' %}"
+                                                    <img src="{{ image.image.url }}"
                                                         alt="img" class="block-image">
                                                     <div class="popup-btn"><a
-                                                            href="{% static 'assets/img_auto/home5/home5-banner-img-01.png' %}"
+                                                            href="{{ image.image.url }}"
                                                             data-fancybox="images"><i class="bi bi-plus"></i></a></div>
                                                 </figure>
                                             </li>
-                                            <li class="blocks-gallery-item">
-                                                <figure>
-                                                    <img src="{% static 'assets/img_auto/home5/home5-banner-img-02.png' %}"
-                                                        alt="img" class="block-image">
-                                                    <div class="popup-btn"><a
-                                                            href="{% static 'assets/img_auto/home5/home5-banner-img-02.png' %}"
-                                                            data-fancybox="images"><i class="bi bi-plus"></i></a></div>
-                                                </figure>
-                                            </li>
-                                            <li class="blocks-gallery-item">
-                                                <figure>
-                                                    <img src="{% static 'assets/img_auto/home5/home5-banner-img-03.png' %}"
-                                                        alt="img" class="block-image">
-                                                    <div class="popup-btn"><a
-                                                            href="{% static 'assets/img_auto/home5/home5-banner-img-03.png' %}"
-                                                            data-fancybox="images"><i class="bi bi-plus"></i></a></div>
-                                                </figure>
-                                            </li>
+                                            {% endfor %}
                                         </ul>
                                     </figure>
 
-                                    <p>
+                                    <!-- <p>
                                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis incidunt
                                         animi dolore sapiente necessitatibus exercitationem inventore dolor soluta quo
                                         placeat cum mollitia tempore, ipsum amet repudiandae facere! Porro, aliquam
@@ -133,7 +111,7 @@
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nemo doloremque
                                         veritatis impedit repudiandae, molestiae assumenda laborum odit vero dolor sed
                                         itaque tenetur sequi eveniet distinctio aliquam quia dicta corrupti.
-                                    </p>
+                                    </p> -->
                                 </div>
                             </div>
                         </div>
@@ -147,6 +125,9 @@
                                     <span class="title-line"></span>
                                 </h6>
                                 <ul>
+                                    <li>
+                                        <span class="data">Цена:</span> <span class="value">{{ car.price }}</span>
+                                    </li>
                                     <li>
                                         <span class="data">Марка:</span> <span class="value">{{ car.make }}</span>
                                     </li>
@@ -193,63 +174,7 @@
             </div>
         </section>
 
-        <section class="contact_us bg-dark-200">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-5">
-                        <div class="section-header">
-                            <h2 class="text-white text-uppercase mb-4">Оставить заявку на подбор</h2>
-                            <p class="$gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi enim
-                                possimus temporibus at odit molestiae eius rerum quis, magnam id aliquam nihil sunt
-                                placeat hic blanditiis vitae deleniti necessitatibus adipisci consectetur. Ut at quam
-                                beatae!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="home_contact">
-                            <form action="" method="POST">
-                                <input class="form-control form-control-lg" name="name" id="name" type="text"
-                                    placeholder="ФИО*" required aria-label=".form-control-lg example">
-
-                                <input class="form-control form-control-lg" name="phone" id="phone" type="number"
-                                    placeholder="Номер телефона WA или Telegram*" aria-label=".form-control-lg example">
-
-                                <input class="form-control form-control-lg" name="name" id="name" type="text"
-                                    placeholder="Модель авто" required aria-label=".form-control-lg example">
-
-                                <input class="form-control form-control-lg" name="name" id="name" type="text"
-                                    placeholder="Тип и объем двигателя" required aria-label=".form-control-lg example">
-
-                                <input class="form-control form-control-lg" name="name" id="name" type="text"
-                                    placeholder="Цвет" required aria-label=".form-control-lg example">
-
-                                <input class="form-control form-control-lg" name="email" id="email" type="email"
-                                    placeholder="VIN номер и номер детали" required
-                                    aria-label=".form-control-lg example">
-
-                                <input class="form-control form-control-lg" name="email" id="email" type="email"
-                                    placeholder="Комплектация" required aria-label=".form-control-lg example">
-
-                                <div class="btn_group">
-                                    <button type="submit" class="btn olive">Отправить</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Section Grid Lines -->
-            <ul class="grid_lines d-none d-md-flex justify-content-between">
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-            </ul>
-        </section>
+        {% include 'include/selection_request.html' %}
     </main>
 
     <!-- Footer-->
