@@ -1,4 +1,5 @@
 from django.db import models
+from django_resized.forms import ResizedImageField
 
 # Create your models here.
 class Car(models.Model):
@@ -66,9 +67,12 @@ class CarImage(models.Model):
         related_name='car_images',
         verbose_name="Автомобиль"
     )
-    image = models.ImageField(
+    image = ResizedImageField(
+        force_format="WEBP", 
+        quality=100, 
         upload_to='cars_images/',
-        verbose_name="Фотография"
+        verbose_name="Основная фотография",
+        blank = True, null = True
     )
 
     def __str__(self):
