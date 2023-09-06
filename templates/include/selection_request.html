@@ -9,28 +9,13 @@
             </div>
             <div class="col-lg-6">
                 <div class="home_contact">
-                    <form action="" method="POST">
+                    <form action="{% url 'send_contact' %}" method="POST">
+                        {% csrf_token %}
                         <input class="form-control form-control-lg" name="name" id="name" type="text"
-                            placeholder="ФИО*" required aria-label=".form-control-lg example">
+                            placeholder="Ваше имя*" required aria-label=".form-control-lg example">
 
-                        <input class="form-control form-control-lg" name="phone" id="phone" type="number"
-                            placeholder="Номер телефона WA или Telegram*" aria-label=".form-control-lg example">
-
-                        <input class="form-control form-control-lg" name="name" id="name" type="text"
-                            placeholder="Модель авто" required aria-label=".form-control-lg example">
-
-                        <input class="form-control form-control-lg" name="name" id="name" type="text"
-                            placeholder="Тип и объем двигателя" required aria-label=".form-control-lg example">
-
-                        <input class="form-control form-control-lg" name="name" id="name" type="text"
-                            placeholder="Цвет" required aria-label=".form-control-lg example">
-
-                        <input class="form-control form-control-lg" name="email" id="email" type="email"
-                            placeholder="VIN номер и номер детали" required
-                            aria-label=".form-control-lg example">
-
-                        <input class="form-control form-control-lg" name="email" id="email" type="email"
-                            placeholder="Комплектация" required aria-label=".form-control-lg example">
+                        <input class="form-control form-control-lg" name="phone" id="email" type="text"
+                            placeholder="Номер телефона" required aria-label=".form-control-lg example">
 
                         <div class="btn_group">
                             <button type="submit" class="btn olive">Отправить</button>

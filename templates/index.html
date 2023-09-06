@@ -93,38 +93,17 @@
 
                                 <div class="about_icon_box">
                                     <div class="row">
+                                        {% for benefit in benefits %}
                                         <div class="col-lg-6">
                                             <div class="icon_box_flex">
                                                 <div class="icon_size">
                                                     <img src="{% static 'assets/img_auto/about/i2.svg' %}" alt="Icon">
                                                 </div>
-                                                <h6>Быстро и качественно</h6>
+                                                <h6>{{ benefit.title }}</h6>
                                             </div>
                                         </div>
-                                        <div class="col-lg-6">
-                                            <div class="icon_box_flex">
-                                                <div class="icon_size">
-                                                    <img src="{% static 'assets/img_auto/about/i3.svg' %}" alt="Icon">
-                                                </div>
-                                                <h6>С нами выгодно</h6>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="icon_box_flex">
-                                                <div class="icon_size">
-                                                    <img src="{% static 'assets/img_auto/about/i1.svg' %}" alt="Icon">
-                                                </div>
-                                                <h6>Работаем быстро</h6>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-6">
-                                            <div class="icon_box_flex">
-                                                <div class="icon_size">
-                                                    <img src="{% static 'assets/img_auto/about/i4.svg' %}" alt="Icon">
-                                                </div>
-                                                <h6>Безграничный выбор</h6>
-                                            </div>
-                                        </div>
+                                        {% endfor %}
+                                        
                                     </div>
                                 </div>
                                 <div class="btn_group" data-aos="fade-down" data-aos-duration="1000">
@@ -273,81 +252,9 @@
                 </div>
             </section>
 
-            <section class="testimonial box_padding pb-0">
-                <!-- Section Grid Lines -->
-                <ul class="grid_lines d-none d-md-flex justify-content-between">
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                </ul>
-                <div class="has_line_lg"></div>
-                <div class="testimonial_inner bg-black">
-                    <!-- Swiper Testimonial -->
-                    <div class="swiper swiper_testimonial">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="testimonial-block text-center">
-                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
-                                    <h6 class="text-olive">John Doe</h6>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-block text-center">
-                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
-                                    <h6 class="text-olive">John Doe</h6>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-block text-center">
-                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
-                                    <h6 class="text-olive">John Doe</h6>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-block text-center">
-                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
-                                    <h6 class="text-olive">John Doe</h6>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-block text-center">
-                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
-                                    <h6 class="text-olive">John Doe</h6>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-block text-center">
-                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
-                                    <h6 class="text-olive">John Doe</h6>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-block text-center">
-                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
-                                    <h6 class="text-olive">John Doe</h6>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-block text-center">
-                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
-                                    <h6 class="text-olive">John Doe</h6>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="testimonial-block text-center">
-                                    <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ulla"</p>
-                                    <h6 class="text-olive">John Doe</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </section>
+            <!-- Reviews -->
+            {% include 'include/reviews.html' %}
+            <!-- Reviews End -->
 
             <section class="blog pt-lg bg-dark-100">
                 <div class="large_font">

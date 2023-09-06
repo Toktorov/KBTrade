@@ -1,0 +1,29 @@
+<section class="testimonial box_padding pb-0">
+    <!-- Section Grid Lines -->
+    <ul class="grid_lines d-none d-md-flex justify-content-between">
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+        <li class="grid_line"></li>
+    </ul>
+    <div class="has_line_lg"></div>
+    <div class="testimonial_inner bg-black">
+        <!-- Swiper Testimonial -->
+        <div class="swiper swiper_testimonial">
+            <div class="swiper-wrapper">
+                {% for review in reviews %}
+                <div class="swiper-slide">
+                    <div class="testimonial-block text-center">
+                        <p>{{ review.text }}</p>
+                        <h6 class="text-olive">{{ review.name }}</h6>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>

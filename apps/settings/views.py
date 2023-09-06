@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-from apps.settings.models import Setting, News
+from apps.settings.models import Setting, News, Benefit, Review, Contact
 from apps.cars.models import Car, CarImage
 
 # Create your views here.
@@ -9,10 +9,14 @@ def index(request):
     news = News.objects.all()
     random_cars = Car.objects.all().order_by('?')[:3]
     cars = Car.objects.all()
+    benefits = Benefit.objects.all().order_by('?')
+    reviews = Review.objects.all().order_by('?')
     return render(request, 'index.html', locals())
 
 def about(request):
     setting = Setting.objects.latest('id')
+    benefits = Benefit.objects.all().order_by('?')
+    reviews = Review.objects.all().order_by('?')
     return render(request, 'about.html', locals())
 
 def benefits(request):
@@ -26,3 +30,9 @@ def stages(request):
 def contact(request):
     setting = Setting.objects.latest('id')
     return render(request, 'contact.html', locals())
+
+def send_contact(request):
+    name = request.POST.get('name')
+    phone = request.POST.get('phone')
+    user_contact = Contact.objects.create(name=name, phone=phone)
+    return redirect('index')

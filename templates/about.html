@@ -42,32 +42,26 @@
                     <img src="https://cdn.motor1.com/images/mgl/mLo2o/s1/rolls-royce-cullinan-black-badge.webp" alt="">
                 </div>
 
-                <div class="mission_bottom_part">
+                <!-- <div class="mission_bottom_part">
                     <div class="row justify-content-center">
                         <div class="col-lg-4 pe-lg-4">
                             <div class="section-header">
-                                <h3 class="text-white text-uppercase border-line">Lorem, ipsum dolor.</h3>
+                                <h3 class="text-white text-uppercase border-line">Наши преимущества</h3>
                             </div>
                         </div>
                         <div class="col-lg-6 ps-lg-4">
                             <div class="mission_content">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat est quo, delectus
-                                    ipsum eos ratione voluptate accusantium esse culpa unde ex ipsa similique, quia
-                                    nostrum recusandae velit iste magnam tempora.</p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat est quo, delectus
-                                    ipsum eos ratione voluptate accusantium esse culpa unde ex ipsa similique, quia
-                                    nostrum recusandae velit iste magnam tempora.</p>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat est quo, delectus
-                                    ipsum eos ratione voluptate accusantium esse culpa unde ex ipsa similique, quia
-                                    nostrum recusandae velit iste magnam tempora.</p>
+                                {% for benefit in benefits %}
+                                <p>{{ benefit.title }}</p>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
-        <div class="video-block" data-aos="zoom-in" data-aos-duration="500">
+        <!-- <div class="video-block" data-aos="zoom-in" data-aos-duration="500">
             <div class="container">
                 <div class="video_post">
                     <div class="ytube_video">
@@ -80,87 +74,40 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <section class="funfacts pd-top-lg bg_2" id="funfacts">
+        <!-- <section class="funfacts pd-top-lg bg_2" id="funfacts">
             <div class="container">
                 <div class="row">
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section class="services inner pb-0">
             <div class="container">
                 <div class="row">
+                    {% for benefit in benefits %}
                     <div class="col-lg-4" data-aos="fade-up" data-aos-duration="500">
                         <div class="icon_box">
-                            <h6>01</h6>
-                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
-                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
-                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
+                            <h6>{{ setting.title }}</h6>
+                            <h4 class="text-white"><a href="javascript:void(0)">{{ benefit.title }}</a></h4>
+                            <p class="text-gray-600">{{ benefit.description }}</p>
                         </div>
                     </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-duration="700">
-                        <div class="icon_box">
-                            <h6>02</h6>
-                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
-                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
-                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-duration="900">
-                        <div class="icon_box">
-                            <h6>03</h6>
-                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
-                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
-                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1100">
-                        <div class="icon_box">
-                            <h6>04</h6>
-                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
-                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
-                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1300">
-                        <div class="icon_box">
-                            <h6>05</h6>
-                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
-                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
-                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1500">
-                        <div class="icon_box">
-                            <h6>06</h6>
-                            <h4 class="text-white"><a href="javascript:void(0)">Lorem, ipsum.</a></h4>
-                            <p class="text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Dignissimos nulla libero consequatur quas veniam eveniet perferendis ea voluptates
-                                commodi! Dolorum veniam esse recusandae amet rerum?</p>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section>
 
-        <section class="highlight_banner bg-dark-200">
+        <!-- <section class="highlight_banner bg-dark-200">
             <div class="container">
                 <div class="row justify-content-center" data-aos="flip-up" data-aos-duration="500">
                     <div class="col-lg-11 p-lg-0">
-                        <p class="about_para text-center">Lorem ipsum dolor <span><a href="about.html">sit amet
-                                </a></span>consectetur adipisicing elit. Ipsa nihil error at non aspernatur <span><a
-                                    href="about.html">accusamus fugit consequuntur aut doloribus?</a></span></p>
+                        <p class="about_para text-center">{{ setting.description }}</a></span></p>
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Our Team -->
         <section class="team">
@@ -225,99 +172,9 @@
             </div>
         </section>
 
-        <section class="testimonial box_padding pb-0">
-            <!-- Section Grid Lines -->
-            <ul class="grid_lines d-none d-md-flex justify-content-between">
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-                <li class="grid_line"></li>
-            </ul>
-            <div class="has_line_lg"></div>
-            <div class="testimonial_inner bg-black">
-                <!-- Swiper Testimonial -->
-                <div class="swiper swiper_testimonial">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="testimonial-block text-center">
-                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ulla"</p>
-                                <h6 class="text-olive">John Doe</h6>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-block text-center">
-                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ulla"</p>
-                                <h6 class="text-olive">John Doe</h6>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-block text-center">
-                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ulla"</p>
-                                <h6 class="text-olive">John Doe</h6>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-block text-center">
-                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ulla"</p>
-                                <h6 class="text-olive">John Doe</h6>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-block text-center">
-                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ulla"</p>
-                                <h6 class="text-olive">John Doe</h6>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-block text-center">
-                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ulla"</p>
-                                <h6 class="text-olive">John Doe</h6>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-block text-center">
-                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ulla"</p>
-                                <h6 class="text-olive">John Doe</h6>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-block text-center">
-                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ulla"</p>
-                                <h6 class="text-olive">John Doe</h6>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="testimonial-block text-center">
-                                <p>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ulla"</p>
-                                <h6 class="text-olive">John Doe</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
+        <!-- Reviews -->
+        {% include 'include/reviews.html' %}
+        <!-- Reviews End -->
 
         {% include 'include/selection_request.html' %}
 
