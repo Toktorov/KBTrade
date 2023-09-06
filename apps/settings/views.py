@@ -21,6 +21,8 @@ def about(request):
 
 def benefits(request):
     setting = Setting.objects.latest('id')
+    benefits = Benefit.objects.all().order_by('?')
+    cars = Car.objects.all()
     return render(request, 'benefits.html', locals())
 
 def stages(request):
@@ -36,3 +38,8 @@ def send_contact(request):
     phone = request.POST.get('phone')
     user_contact = Contact.objects.create(name=name, phone=phone)
     return redirect('index')
+
+def news_detail(request, id):
+    setting = Setting.objects.latest('id')
+    news = News.objects.get(id = id)
+    return render(request, 'news_detail.html', locals())

@@ -76,40 +76,18 @@
                     <div class="col-lg-12 col-md-12 ps-lg-0">
                         <div class="team-member-information">
                             <h5 class="name text-white">Преимущества</h5>
-                            <h6 class="designation text-uppercase text-olive">Lorem, ipsum.</h6>
-                            <div class="bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur eius
-                                obcaecati necessitatibus. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                Neque, dolore sequi. Quis, quod id accusantium, nisi possimus maiores nam enim deleniti
-                                exercitationem nulla mollitia, sit ab! Temporibus expedita eum sint nobis unde
-                                consequatur dolorem nemo, mollitia at dolores voluptate nesciunt magnam, quas provident
-                                obcaecati ipsa sequi fuga nostrum ullam eveniet. Aut, minus enim recusandae error,
-                                suscipit odit est dolorum quidem veniam quas, mollitia porro reiciendis impedit ea
-                                libero accusamus repellendus nulla aliquid quam in ut dolore eaque. Adipisci amet dicta
-                                natus enim eaque? Doloribus beatae quibusdam earum eaque, totam provident quo odio iure
-                                id illo praesentium accusantium repellat exercitationem aut labore sunt adipisci
-                                molestias eius non ab quaerat, hic explicabo reprehenderit! Molestias esse quisquam hic,
-                                necessitatibus asperiores dolorum nostrum eligendi unde blanditiis rem beatae quo
-                                nesciunt consectetur temporibus sint nisi nihil porro tempore optio sapiente natus
-                                magnam velit. Amet dolore aliquid ad repellendus quod ut. Itaque odio quod amet a?</div>
+                            <h6 class="designation text-uppercase text-olive">{{ setting.title }}</h6>
+                            <div class="bio">{{ setting.description }}</div>
 
                             <div class="edu-quali">
                                 <h6 class="widget-title">
-                                    Lorem, ipsum.
+                                    Почему мы?
                                     <span class="title-line"></span>
                                 </h6>
                                 <ul class="point_order">
-                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis
-                                        dignissimos reiciendis nisi incidunt, voluptatum, numquam ea eaque deleniti,
-                                        voluptatibus molestias! Omnis, doloribus delectus nemo numquam ea nam laboriosam
-                                        cumque? <span>Lorem, ipsum.</span></li>
-                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis
-                                        dignissimos reiciendis nisi incidunt, voluptatum, numquam ea eaque deleniti,
-                                        voluptatibus molestias! Omnis, doloribus delectus nemo numquam ea nam laboriosam
-                                        cumque? <span>Lorem, ipsum.</span></li>
-                                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur omnis
-                                        dignissimos reiciendis nisi incidunt, voluptatum, numquam ea eaque deleniti,
-                                        voluptatibus molestias! Omnis, doloribus delectus nemo numquam ea nam laboriosam
-                                        cumque? <span>Lorem, ipsum.</span></li>
+                                    {% for benefit in benefits %}
+                                    <li>{{ benefit.description }}</span></li>
+                                    {% endfor %}
                                 </ul>
                             </div>
                         </div>
@@ -121,56 +99,22 @@
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="project">
                                 <h6 class="widget-title text-white mb-3">
-                                    Lorem, ipsum dolor.
+                                    Автомобили в наличии
                                     <span class="title-line"></span>
                                 </h6>
-                                <div class="text text-white">At vero eos et accusamus et iusto odio digni
-                                    is simos ducimus qui blanditiis praesentium
-                                    volu ptatum dele niti atque corryi upti quos.
-                                    dolores et quas molestias. At vero eos et
-                                    accusamus et iusto.
+                                <div class="text text-white">Автомобили в наличии {{ setting.title }}
                                 </div>
                             </div>
                         </div>
+                        {% for car in cars %}
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="project">
-                                <a href="project-details.html">
-                                    <img src="https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_1_1600.jpg" alt="img">
+                                <a href="{% url 'car_detail' car.id %}">
+                                    <img src="{{ car.car_images.all.0.image.url }}" alt="img">
                                 </a>
                             </div>
                         </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="project">
-                                <a href="project-details.html">
-                                    <img src="https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_1_1600.jpg" alt="img">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="project">
-                                <a href="project-details.html">
-                                    <img src="https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_1_1600.jpg" alt="img">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="project">
-                                <a href="project-details.html">
-                                    <img src="https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_1_1600.jpg" alt="img">
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="project">
-                                <a href="project-details.html">
-                                    <img src="https://media.ed.edmunds-media.com/rolls-royce/cullinan/2020/oem/2020_rolls-royce_cullinan_4dr-suv_base_fq_oem_1_1600.jpg" alt="img">
-                                </a>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

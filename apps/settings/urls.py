@@ -1,6 +1,6 @@
 from django.urls import path 
 
-from apps.settings.views import index, about, benefits, stages, contact, send_contact
+from apps.settings.views import index, about, benefits, stages, contact, send_contact, news_detail
 
 
 urlpatterns = [
@@ -10,4 +10,5 @@ urlpatterns = [
     path('stages/', stages, name='stages'),
     path('contact/', contact, name='contact'),
     path('send_contact/', send_contact, name='send_contact'),
+    path('news/<int:id>/', news_detail, name='news_detail'),
 ]

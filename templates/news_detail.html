@@ -1,0 +1,154 @@
+{% extends 'include/homepage.html' %}
+{% load static %}
+{% block content %}
+
+        <!-- Preloader -->
+        <div id="preloader">
+			<div class="preloader-inner">
+				<div class="spinner"></div>
+				<div class="loading-text">
+					<span data-preloader-text="K" class="characters">K</span>
+					<span data-preloader-text="B" class="characters">B</span>
+					<span data-preloader-text=" " class="characters"> </span>
+					<span data-preloader-text="T" class="characters">T</span>
+					<span data-preloader-text="R" class="characters">R</span>
+					<span data-preloader-text="A" class="characters">A</span>
+					<span data-preloader-text="D" class="characters">D</span>
+					<span data-preloader-text="E" class="characters">E</span>
+				</div>
+			</div>
+		</div>
+
+        <!-- Cursor Effect -->
+        <div class="pointer bnz-pointer" id="bnz-pointer"></div>
+
+        <!-- Header -->
+		{% include 'include/header.html' %}
+
+		<!-- Page Header -->
+        <div class="page_header">
+            <div class="page_header_inner">
+                <div class="container">
+                    <div class="page_header_content d-flex align-items-center justify-content-between">
+                        <h2 class="heading">{{ news.title }}</h2>
+                        <ul class="breadcrumb d-flex align-items-center">
+                            <li><a href="{% url 'index' %}">Главная</a></li>
+                            <li><a href="{% url 'index' %}">Новости</a></li>
+                            <li class="active">{{ news.title }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+        
+        <!-- Main Wrapper-->
+        <main class="wrapper">
+            <!-- Scroll Progress -->
+            
+            <section class="project-details bg-dark-200">
+                <div class="container">
+                    <div class="row">                        
+                        <div class="col-lg-8 col-md-8 mx-auto">
+                            <div class="project-details_inner">
+                                <div class="post_content">
+									<div class="post-header">
+										<h3 class="post-title">{{ news.title }}</h3>
+									</div>
+                                    <div class="intro">
+                                        <p>
+											{{ news.description }}
+										</p>
+                                    </div>
+									<div class="fulltext">
+                                        <figure class="block-gallery mb-0">
+											<ul class="blocks-gallery-grid">
+												<li class="blocks-gallery-item mb-0 me-0">
+                                                    <figure>
+                                                        <a href="#"><img src="{{ news.image.url }}" alt="img" class="block-image"></a>
+                                                    </figure>
+                                                </li>
+											</ul>
+										</figure>
+
+										<!-- <h6 class="widget-title">
+											Lorem, ipsum dolor.
+											<span class="title-line"></span>
+										</h6>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptatum commodi alias ipsa quod accusantium quam eaque neque maiores ea!</p>
+										<ul class="point_order">
+											<li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis ipsam voluptatibus obcaecati vel accusantium facere.</li>
+											<li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, fugit?</li>
+											<li>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, fugit?</li>
+										</ul>
+
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aperiam provident error, architecto adipisci sapiente ullam incidunt repudiandae nam voluptate magni nesciunt iure velit minus fuga blanditiis doloribus ducimus laboriosam. Harum quis dolorum facere culpa minima voluptatum praesentium ex similique!
+                                        </p>
+
+										<p>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aperiam provident error, architecto adipisci sapiente ullam incidunt repudiandae nam voluptate magni nesciunt iure velit minus fuga blanditiis doloribus ducimus laboriosam. Harum quis dolorum facere culpa minima voluptatum praesentium ex similique!
+										</p>
+
+										<figure class="block-gallery mb-5">
+											<ul class="blocks-gallery-grid">
+												<li class="blocks-gallery-item mb-0 me-0">
+                                                    <figure>
+                                                        <a href="#"><img src="../assets/img_auto/home5/home5-banner-img-02.png" alt="img" class="block-image"></a>
+                                                    </figure>
+                                                </li>
+											</ul>
+										</figure>
+
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quae perspiciatis quis atque, ex nam? Doloribus impedit modi quidem hic officiis aperiam debitis non culpa assumenda odio iure recusandae accusantium ratione vel temporibus, mollitia eos, nisi laudantium consequatur minus quis?
+                                        </p>
+
+										<p>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque nesciunt laborum nihil perspiciatis, dolorum accusamus amet non, fugit saepe suscipit ducimus impedit quos rem doloremque illum sunt consequuntur sed ullam, aut autem? Omnis magnam maiores, perferendis totam ratione quo quae.
+										</p> -->
+
+                                        <div class="post-footer">
+                                            <div class="post-share">
+                                                <ul class="share-list">
+                                                    <li>Поделиться:</li>
+                                                    <li class="facebook aos-init aos-animate" data-aos="fade-up" data-aos-duration="500"><a href="#">Facebook</a></li>
+                                                    <li class="twitter aos-init aos-animate" data-aos="fade-up" data-aos-duration="800"><a href="#">Instagram</a></li>
+                                                    <li class="pinterest aos-init aos-animate" data-aos="fade-up" data-aos-duration="1100"><a href="#">Telegram</a></li>
+                                                    <li class="instagram aos-init aos-animate" data-aos="fade-up" data-aos-duration="1400"><a href="#">TikTok</a></li>
+                                                    <li class="linkedin aos-init aos-animate" data-aos="fade-up" data-aos-duration="1400"><a href="#">Whatsapp</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+								</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            {% include 'include/selection_request.html' %}
+
+        </main>
+
+        {% include 'include/footer.html' %}
+
+        <div class="totop">
+            <a href="#">↑</a>
+        </div>
+
+        <!-- Page Grid Lines -->
+        <ul class="grid_lines d-none d-md-flex justify-content-between">
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+            <li class="grid_line"></li>
+        </ul>
+
+{% endblock %}

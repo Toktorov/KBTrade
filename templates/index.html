@@ -207,7 +207,7 @@
                         <div class="grid-item landscape exterior" data-aos="fade-up" data-aos-duration="700"> 
                             <div class="thumb">
                                 <img class="item_image" src="https://www.ixbt.com/img/n1/news/2022/4/2/Toyota-Land-Cruiser-Widebody-By-KHANN-International-New-1_large.jpg" alt="">
-                                <div class="works-info">
+                                <div class="fworks-info">
                                     <div class="label-text">
                                         <h5><a href="project-details.html">Машина 4</a></h5>
                                         <h6><a href="index-6.html#">Подробнее</a></h6>
@@ -265,48 +265,22 @@
                         <h2 class="text-white">Новости</h2>
                     </div>
                     <div class="row">
+                        {% for new in news %}
                         <div class="col-lg-4 col-md-6">
                             <div class="blog_post mb-0">
-                                <img src="{% static 'assets/img_auto/home3/mercedes.png' %}g" alt="img">
+                                <img src="{{ new.image.url }}" alt="img">
                                 <div class="blog_content">                                    
                                     <h2 class="post-count">01</h2>
                                     <div class="meta">
-                                        <time class="text-olive" datetime="2023-09-03">11 Сентября, 2023</time>
+                                        <time class="text-olive" datetime="2023-09-03">{{ new.created }}</time>
                                     </div>
-                                    <h5><a href="blog-details.html" class="text-white">Новость 1</a></h5>
-                                    <p>Lorem ipsum dolor sit amet consecteur adipiscing elitsed do eiusmod tempor incididunt labo dolore magnaaliqua. Ut eni ad minim veniam dolor sit amet consecteur.....</p>
-                                    <div class="details_link"><a href="blog-details.html"><span class="link_text">Подробнее</span> <span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
+                                    <h5><a href="{% url 'news_detail' new.id %}" class="text-white">{{ new.title }}</a></h5>
+                                    <p>{{ news.description }}</p>
+                                    <div class="details_link"><a href="{% url 'news_detail' new.id %}"><span class="link_text">Подробнее</span> <span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="blog_post mb-0">
-                                <img src="{% static 'assets/img_auto/home3/suzuki2.png' %}" alt="img">
-                                <div class="blog_content">                                    
-                                    <h2 class="post-count">02</h2>
-                                    <div class="meta">
-                                        <time class="text-olive" datetime="2023-09-03">11 Сентября, 2023</time>
-                                    </div>
-                                    <h5><a href="blog-details.html" class="text-white">Новость 2</a></h5>
-                                    <p>Lorem ipsum dolor sit amet consecteur adipiscing elitsed do eiusmod tempor incididunt labo dolore magnaaliqua. Ut eni ad minim veniam dolor sit amet consecteur.....</p>
-                                    <div class="details_link"><a href="blog-details.html"><span class="link_text">Подробнее</span> <span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="blog_post mb-0">
-                                <img src="{% static 'assets/img_auto/home3/mercedes.png' %} alt="img">
-                                <div class="blog_content">                                    
-                                    <h2 class="post-count">03</h2>
-                                    <div class="meta">
-                                        <time class="text-olive" datetime="2023-09-03">11 Сентября, 2023</time>
-                                    </div>
-                                    <h5><a href="blog-details.html" class="text-white">Новость 3</a></h5>
-                                    <p>Lorem ipsum dolor sit amet consecteur adipiscing elitsed do eiusmod tempor incididunt labo dolore magnaaliqua. Ut eni ad minim veniam dolor sit amet consecteur.....</p>
-                                    <div class="details_link"><a href="blog-details.html"><span class="link_text">Подробнее</span> <span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
-                                </div>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </section>

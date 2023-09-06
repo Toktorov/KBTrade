@@ -76,11 +76,11 @@
                     <div class="row justify-content-between">
                         <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
                             <div class="home_contact">
-                                <form action="" method="POST">
+                                <form action="{% url 'send_contact' %}" method="POST">
+                                    {% csrf_token %}
                                     <input class="form-control form-control-lg" name="name" id="name" type="text" placeholder="ФИО*" required aria-label=".form-control-lg example">
-                                    <input class="form-control form-control-lg" name="phone" id="phone" type="number" placeholder="Номер телефона" aria-label=".form-control-lg example">
-                                    <input class="form-control form-control-lg" name="email" id="email" type="email" placeholder="Email*" required aria-label=".form-control-lg example">
-                                    <textarea class="form-control pt-4" name="message" id="message" placeholder="Ваш вопрос" rows="3"></textarea>
+                                    <input class="form-control form-control-lg" name="phone" id="phone" type="text" placeholder="Номер телефона" aria-label=".form-control-lg example">
+                                    
                                     <div class="btn_group">
                                         <button type="submit" class="btn olive">Отправить</button>  
                                     </div>
