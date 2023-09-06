@@ -11,6 +11,20 @@ class Car(models.Model):
         max_length=200,
         verbose_name="Модель"
     )
+    price = models.CharField(
+        max_length=255,
+        verbose_name="Цена",
+        blank=True, null=True
+    )
+    year = models.PositiveSmallIntegerField(
+        verbose_name="Год",
+        blank=True, null=True
+    )
+    color = models.CharField(
+        max_length=100,
+        verbose_name="Цвет",
+        blank=True, null=True
+    )
     car_body = models.CharField(
         max_length=100,
         verbose_name="Кузов",
@@ -28,10 +42,6 @@ class Car(models.Model):
     car_volume = models.CharField(
         max_length=20,
         verbose_name="Объем",
-        blank=True, null=True
-    )
-    year = models.PositiveSmallIntegerField(
-        verbose_name="Год",
         blank=True, null=True
     )
     gearbox = models.CharField(
