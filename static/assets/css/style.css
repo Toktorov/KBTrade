@@ -12311,13 +12311,13 @@ body.left_menu .mr_menu {
 
 .theme_slider .swiper-slide .slider {
   background-repeat: repeat;
-  background-size: cover;
-  background-position: left center;
+  background-size: revert;
+  background-position: center;
   transition: all 0.5s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: end;
-  padding: 0px 0px;
+  padding: 100px 0px;
 }
 
 .theme_slider .swiper-slide .slider .slide_content {
