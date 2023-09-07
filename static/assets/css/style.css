@@ -12311,7 +12311,7 @@ body.left_menu .mr_menu {
 
 .theme_slider .swiper-slide .slider {
   background-repeat: repeat;
-  background-size: revert;
+  background-size: cover;
   background-position: center;
   transition: all 0.5s ease-in-out;
   display: flex;
