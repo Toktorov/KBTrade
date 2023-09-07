@@ -15,10 +15,14 @@
                 </ul>
             </div>
             <div class="header_right_part d-flex align-items-center">
-                <button class="aside_open">
+                <!-- <button class="aside_open">
                     <span class="line"></span>
                     <span class="line"></span>
                     <span class="line"></span>
+                </button> -->
+                 <!-- Mobile Responsive Menu Toggle Button -->
+                <button type="button" class="mr_menu_toggle d-lg-none">
+                    <i class="bi bi-list"></i>
                 </button>
             </div>
         </div>
@@ -47,7 +51,7 @@
                         </ul>
                     </div>
                     <div class="copyright">
-                        <p>KB Trade 2023. All Rights Reserved</p>
+                        <p>{{ setting.title }} 2023. All Rights Reserved</p>
                     </div>
                 </div>
             </div>
@@ -61,13 +65,13 @@
         <a href="{% url 'index' %}" class="light_logo"><img src="{% static 'assets/img_auto/logo.png' %}" alt="logo"></a>
     </div>
     <div class="aside_info_inner">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <p>{{ setting.description }}</p>
         
         <div class="aside_info_inner_box">
             <h5>Контакты</h5>
-            <p>+996 456 789 333</p>
-            <p>Кыргызстан</p>
-            <p>KBtrade@gmail.com</p>
+            <p>{{ setting.phone }}</p>
+            <p>{{ setting.address }}</p>
+            <p>{{ setting.email }}</p>
 
         </div>
         <div class="social_sites">
