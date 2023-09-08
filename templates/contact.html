@@ -25,32 +25,6 @@
         <!-- Header -->
 		{% include 'include/header.html' %}
 
-        <div class="aside_info_wrapper">
-			<button class="aside_close"><i class="bi bi-x-lg"></i></button>
-            <div class="aside_logo">
-                <a href="index.html" class="light_logo"><img src="{% static 'assets/img_auto/logo.png' %}" alt="logo"></a>
-            </div>
-			<div class="aside_info_inner">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                
-                <div class="aside_info_inner_box">
-                    <h5>Контакты</h5>
-                    <p>+996 456 789 333</p>
-                    <p>Кыргызстан</p>
-                    <p>KBtrade@gmail.com</p>
-
-                </div>
-                <div class="social_sites">
-                    <ul class="d-flex align-items-center justify-content-center">
-                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                        <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
-                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                        <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
-                        <li><a href="#"><i class="bi bi-telegram"></i></a></li>
-                    </ul>
-                </div>
-			</div>
-		</div>
 
 		<!-- Page Header -->
         <div class="page_header">
@@ -59,7 +33,7 @@
                     <div class="page_header_content d-flex align-items-center justify-content-between">
                         <h2 class="heading">Контакты</h2>
                         <ul class="breadcrumb d-flex align-items-center">
-                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="{% url 'index' %}">Главная</a></li>
                             <li class="active">Контакты</li>
                         </ul>
                     </div>
@@ -134,69 +108,7 @@
         </main>
 
         <!-- Footer-->
-        <footer class="footer bg-dark-200 box_padding">
-            <div class="footer_inner bg-black">
-                <div class="container">
-                    <div class="row align-items-end">
-                        <div class="col-lg-4 col-md-2 col-sm-2">
-                            <div class="section-header">
-                                <h2>Контакты</h2>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-5 col-sm-5">
-                            <div class="communication">
-                                <div class="info_body">
-                                    <h6>Email</h6>
-                                    <h5>KBtrade@gmail.com</h5>
-                                </div>
-                                <div class="info_body">
-                                    <h6>Номер телефона</h6>
-                                    <h5>+996 555 777 666</h5>
-                                </div>
-                                <div class="info_body">
-                                    <h6>Наш адрес</h6>
-                                    <h5>Кыргызстан, г.Бишкек</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-5 col-sm-5">
-                            <div class="footer_elements d-flex align-items-center justify-content-end">
-                                <div class="footer_elements_inner">
-                                    <div class="footer_logo">
-                                        <a href="index.html" class="light_logo"><img src="{% static 'assets/img_auto/logo.png' %}" alt="logo"></a>
-                                    </div>
-                                    <div class="footer_social">
-                                        <ul class="social_list">
-                                            <li class="facebook"><a href="#"><i class="bi bi-facebook"></i></a></li>
-                                            <li class="twitter"><a href="#"><i class="bi bi-telegram"></i></a></li>
-                                            <li class="instagram"><a href="#"><i class="bi bi-instagram"></i></a></li>
-                                            <li class="tiktok"><a href="#"><i class="bi bi-tiktok"></i></a></li>
-                                            <li class="whatsapp"><a href="#"><i class="bi bi-whatsapp"></i></a></li>
-                                            <li class="telegram"><a href="#"><i class="bi bi-telegram"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="copyright">
-                                        <p>KBTrade 2023. All Rights Reserved</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-
-                <!-- Section Grid Lines -->
-                <ul class="grid_lines d-none d-md-flex justify-content-between">
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                    <li class="grid_line"></li>
-                </ul>
-            </div>
-        </footer>
+        {% include 'include/footer.html' %}
 
         <div class="totop">
             <a href="#">↑</a>
