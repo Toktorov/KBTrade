@@ -34,34 +34,13 @@
                         <div class="swiper-wrapper">
                             {% for car in random_cars %}
                             <div class="swiper-slide">
-                                <div class="slider" style="background-image: url('{{ car.car_images.all.0.image.url }}')">
-                                    <div class="slide_content">
-                                        <div class="slide_content_wrapper mb-0 h-auto bg-dark-100">
-                                            <div class="slide_content_inner">
-                                                <div class="meta m-0">
-                                                    <div class="category text-olive text-uppercase">KB TRADE</div>
-                                                </div>
-                                                <h4><a href="{% url 'car_detail' car.id %}" class="text-white">{{ car.make }} {{ car.model }} {{ car.year }}</a></h4>
-                                                <div class="details_link">
-                                                    <a href="{% url 'car_detail' car.id %}">
-                                                        <span class="link_text">Подробнее</span> 
-                                                        <span class="link_icon">
-                                                            <span class="line"></span> 
-                                                            <span class="circle"></span>
-                                                            <span class="dot"></span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="slider" style="background-image: url('{{ car.car_images.all.0.image.url }}')"></div>
                             </div>
                             {% endfor %}
                         </div>
                         <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
-
+                        
                         <!-- Add Buttons -->
                         <div class="swiper-navigation">
                             <div class="swiper-button-prev"><i class="bi bi-arrow-left"></i></div>
