@@ -33,7 +33,11 @@
                 <div class="swiper swiper_theme_slider_7">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
+                            {% if setting.logistics %}
+                            <div class="slider" style="background: url('{{ setting.logistics.url }}') center/cover">
+                            {% else %}
                             <div class="slider" style="background: url('https://seanews.ru/wp-content/uploads/2021/06/maersk-sudno-gruz.jpg') center/cover">
+                            {% endif %}
                                 <div class="container">
                                     <div class="slide_content">
                                         <div class="slide_content_wrapper mb-0 h-auto">
@@ -48,7 +52,11 @@
                         </div>
 
                         <div class="swiper-slide">
+                            {% if setting.cars %}
+                            <div class="slider" style="background: url('{{ setting.cars.image }}') center/cover">
+                            {% else %}
                             <div class="slider" style="background: url('https://hips.hearstapps.com/hmg-prod/amv-prod-cad-assets/wp-content/uploads/2018/02/2018-Hyundai-Sonata-SEL-2.4L-112.jpg?crop=0.904xw:0.740xh;0.0208xw,0.260xh&resize=1200:*') center/cover">
+                            {% endif %}
                                 <div class="container">
                                     <div class="slide_content">
                                         <div class="slide_content_wrapper mb-0 h-auto">
@@ -63,7 +71,11 @@
                         </div>
 
                         <div class="swiper-slide">
+                            {% if setting.special_equipment %}
+                            <div class="slider" style="background: url('{{ setting.special_equipment.url }}') center/cover">
+                            {% else %}
                             <div class="slider" style="background: url('https://exkavator.ru/_modules/_cnews/images/announce480/143178.jpg?__t=1686746868') center/cover">
+                            {% endif %}
                                 <div class="container">
                                     <div class="slide_content">
                                         <div class="slide_content_wrapper mb-0 h-auto">
@@ -78,7 +90,11 @@
                         </div>
 
                         <div class="swiper-slide">
+                            {% if setting.spare_parts %}
+                            <div class="slider" style="background: url('{{ setting.spare_parts.url }}') center/cover">
+                            {% else %}
                             <div class="slider" style="background: url('https://msystem.com.ua/wp-content/uploads/2021/07/car_parts_case.jpg') center/cover">
+                            {% endif %}
                                 <div class="container">
                                     <div class="slide_content">
                                         <div class="slide_content_wrapper mb-0 h-auto">

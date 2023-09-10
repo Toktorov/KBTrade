@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from apps.settings.models import Setting, News, Benefit, Review, Contact
+from apps.settings.models import Setting, News, Benefit, Review, Contact, Team
 from apps.cars.models import Car, CarImage
 
 # Create your views here.
@@ -17,6 +17,7 @@ def about(request):
     setting = Setting.objects.latest('id')
     benefits = Benefit.objects.all().order_by('?')
     reviews = Review.objects.all().order_by('?')
+    teams = Team.objects.all()
     return render(request, 'about.html', locals())
 
 def benefits(request):

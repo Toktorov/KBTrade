@@ -22,6 +22,26 @@ class Setting(models.Model):
         max_length=100,
         verbose_name="Номер телефона"
     )
+    logistics = models.ImageField(
+        upload_to='slider/',
+        verbose_name="Фотография логистики",
+        blank=True, null=True
+    )
+    cars = models.ImageField(
+        upload_to='slider/',
+        verbose_name="Фотография машины",
+        blank=True, null=True
+    )
+    special_equipment = models.ImageField(
+        upload_to='slider/',
+        verbose_name="Фотография спецтехники",
+        blank=True, null=True
+    )
+    spare_parts = models.ImageField(
+        upload_to='slider/',
+        verbose_name="Фотография запчастей",
+        blank=True, null=True
+    )
     address = models.CharField(
         max_length=300,
         verbose_name="Адрес"

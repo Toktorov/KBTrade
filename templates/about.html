@@ -39,7 +39,7 @@
                         <p class="text-gray-600">{{ setting.description }}</p>
                     </div>
                     <div class="has_line"></div>
-                    <img src="https://cdn.motor1.com/images/mgl/mLo2o/s1/rolls-royce-cullinan-black-badge.webp" alt="KB Trade">
+                    <img src="https://images.carexpert.com.au/resize/3000/-/app/uploads/2022/07/2023-hyundai-palisade-highlander-4.jpg" alt="KB Trade">
                 </div>
 
                 <!-- <div class="mission_bottom_part">
@@ -119,45 +119,18 @@
                     <!-- Swiper Team -->
                     <div class="swiper swiper_team">
                         <div class="swiper-wrapper">
+                            {% if teams %}
+                            {% for team in teams %}
                             <div class="swiper-slide">
                                 <div class="team-block">
-                                    <img src="{% static 'assets/img_auto/team/1.jpg' %}" alt="KB Trade">
-                                    <h5 class="text-white"><a href="javascript:void(0)">John Doe</a></h5>
-                                    <h6 class="text-uppercase text-olive">Someone</h6>
+                                    <img src="{{ team.image.url }}" alt="KB Trade">
+                                    <h5 class="text-white"><a href="javascript:void(0)">{{ team.name_surname }}</a></h5>
+                                    <h6 class="text-uppercase text-olive">{{ team.job_title }}</h6>
                                 </div>
                             </div>
-
-                            <div class="swiper-slide">
-                                <div class="team-block">
-                                    <img src="{% static 'assets/img_auto/team/2.jpg' %}" alt="KB Trade">
-                                    <h5 class="text-white"><a href="javascript:void(0)">John Doe</a></h5>
-                                    <h6 class="text-uppercase text-olive">Someone</h6>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="team-block">
-                                    <img src="{% static 'assets/img_auto/team/3.jpg' %}" alt="KB Trade">
-                                    <h5 class="text-white"><a href="javascript:void(0)">John Doe</a></h5>
-                                    <h6 class="text-uppercase text-olive">Someone</h6>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="team-block">
-                                    <img src="{% static 'assets/img_auto/team/4.jpg' %}" alt="KB Trade">
-                                    <h5 class="text-white"><a href="javascript:void(0)">John Doe</a></h5>
-                                    <h6 class="text-uppercase text-olive">Someone</h6>
-                                </div>
-                            </div>
-
-                            <div class="swiper-slide">
-                                <div class="team-block">
-                                    <img src="{% static 'assets/img_auto/team/5.jpg' %}" alt="KB Trade">
-                                    <h5 class="text-white"><a href="javascript:void(0)">John Doe</a></h5>
-                                    <h6 class="text-uppercase text-olive">Someone</h6>
-                                </div>
-                            </div>
+                            {% endfor %}
+                            {% endif %}
+                            
                         </div>
                         <!-- Add Pagination -->
                         <!-- <div class="swiper-pagination"></div> -->
