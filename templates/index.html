@@ -19,7 +19,7 @@
 		</div>
 
         <!-- Cursor Effect -->
-        <div class="pointer bnz-pointer" id="bnz-pointer"></div>
+        <!-- <div class="pointer bnz-pointer" id="bnz-pointer"></div> -->
 
         <!-- Header -->
 		{% include 'include/header.html' %}
@@ -38,8 +38,8 @@
                                     <div class="slide_content">
                                         <div class="slide_content_wrapper mb-0 h-auto">
                                             <div class="slide_content_inner">
-                                                <h4><a href="#" class="text-white text-uppercase">Логистика</a></h4>
-                                                
+                                                <h4><a href="{{ setting.whatsapp }}" class="text-white text-uppercase">Логистика</a></h4>
+                                                <a href="{{ setting.whatsapp }}" class="btn gray">Заказать</a>
                                             </div>
                                         </div>
                                     </div>
@@ -53,8 +53,8 @@
                                     <div class="slide_content">
                                         <div class="slide_content_wrapper mb-0 h-auto">
                                             <div class="slide_content_inner">
-                                                <h4><a href="#" class="text-white text-uppercase">Автомобили</a></h4>
-                                                
+                                                <h4><a href="{{ setting.whatsapp }}" class="text-white text-uppercase">Автомобили</a></h4>
+                                                <a href="{{ setting.whatsapp }}" class="btn gray">Заказать</a>
                                             </div>
                                         </div>
                                     </div>
@@ -68,8 +68,8 @@
                                     <div class="slide_content">
                                         <div class="slide_content_wrapper mb-0 h-auto">
                                             <div class="slide_content_inner">
-                                                <h4><a href="#" class="text-white text-uppercase">Спецтехника</a></h4>
-                                                
+                                                <h4><a href="{{ setting.whatsapp }}" class="text-white text-uppercase">Спецтехника</a></h4>
+                                                <a href="{{ setting.whatsapp }}" class="btn gray">Заказать</a>
                                             </div>
                                         </div>
                                     </div>
@@ -78,13 +78,13 @@
                         </div>
 
                         <div class="swiper-slide">
-                            <div class="slider" style="background: url('https://avtomoll86.ru/wp-content/uploads/koreya-avto-001.jpg') center/cover">
+                            <div class="slider" style="background: url('https://msystem.com.ua/wp-content/uploads/2021/07/car_parts_case.jpg') center/cover">
                                 <div class="container">
                                     <div class="slide_content">
                                         <div class="slide_content_wrapper mb-0 h-auto">
                                             <div class="slide_content_inner">
-                                                <h4><a href="#" class="text-white text-uppercase">Запчасти</a></h4>
-                                                
+                                                <h4><a href="{{ setting.whatsapp }}" class="text-white text-uppercase">Запчасти</a></h4>
+                                                <a href="{{ setting.whatsapp }}" class="btn gray">Заказать</a>
                                             </div>
                                         </div>
                                     </div>
@@ -96,8 +96,8 @@
                     <div class="swiper-pagination"></div>
 
                     <!-- Add Buttons -->
-                    <div class="swiper-button-prev details_link l-dir pagination-previous"><a href="index-8.html#"><span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
-                    <div class="swiper-button-next details_link r-dir pagination-next"><a href="index-8.html#"><span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
+                    <div class="swiper-button-prev details_link l-dir pagination-previous"><a href="{% url 'index' %}"><span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
+                    <div class="swiper-button-next details_link r-dir pagination-next"><a href="{% url 'index' %}"><span class="link_icon"><span class="line"></span> <span class="circle"></span><span class="dot"></span></span></a></div>
                     
                 </div>
             </div>
@@ -111,7 +111,7 @@
                         <div class="col-lg-5 col-md-5">
                             <div class="about_image">
                                 <img src="https://scene7.toyota.eu/is/image/toyotaeurope/my23es32?&wid=1280&fit=fit,1&ts=1666940663229&resMode=sharp2&op_usm=1.75,0.3,2,0" alt="img">
-                                <img src="{% static 'assets/img_auto/e1.svg' %}" alt="About" data-aos="fade-down" data-aos-duration="1000">
+                                <img src="{% static 'assets/img_auto/e1.svg' %}" alt="О KB Trade" data-aos="fade-down" data-aos-duration="1000">
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-7">
@@ -127,7 +127,7 @@
                                         <div class="col-lg-6">
                                             <div class="icon_box_flex">
                                                 <div class="icon_size">
-                                                    <img src="{% static 'assets/img_auto/about/i2.svg' %}" alt="Icon">
+                                                    <img src="{% static 'assets/img_auto/about/i2.svg' %}" alt="KB Trade">
                                                 </div>
                                                 <h6>{{ benefit.title }}</h6>
                                             </div>
@@ -163,7 +163,7 @@
                                 </div>                             -->
                                 <div class="funfact2 d-flex align-items-center">
                                     <div class="fun_img">
-                                        <img src="{% static 'assets/img_auto/fact-2.png' %}" alt="img">
+                                        <img src="{% static 'assets/img_auto/fact-2.png' %}" alt="KB Trade">
                                     </div>
                                     <div class="funfact_content">
                                         <p>Довольных клиентов</p>
@@ -172,7 +172,7 @@
                                 </div>                            
                                 <div class="funfact2 d-flex align-items-center">
                                     <div class="fun_img">
-                                        <img src="{% static 'assets/img_auto/fact-3.png' %}" alt="img">
+                                        <img src="{% static 'assets/img_auto/fact-3.png' %}" alt="KB Trade">
                                     </div>
                                     <div class="funfact_content">
                                         <p>Лет на рынке</p>
@@ -181,7 +181,7 @@
                                 </div>                            
                                 <div class="funfact2 d-flex align-items-center">
                                     <div class="fun_img">
-                                        <img src="{% static 'assets/img_auto/fact-4.png' %}" alt="img">
+                                        <img src="{% static 'assets/img_auto/fact-4.png' %}" alt="KB Trade">
                                     </div>
                                     <div class="funfact_content">
                                         <p>Отзывов</p>
@@ -202,7 +202,7 @@
                         {% for car in cars %}                   
                         <div class="grid-item residences" data-aos="fade-up" data-aos-duration="700">
                             <div class="thumb">
-                                <a href="{% url 'car_detail' car.id %}"><img class="item_image first" src="{{ car.car_images.all.0.image.url }}" alt=""></a>
+                                <a href="{% url 'car_detail' car.id %}"><img class="item_image first" src="{{ car.car_images.all.0.image.url }}" alt="{{ car.make }} {{ car.model }}"></a>
                                 <div class="works-info">
                                     <div class="label-text">
                                         <h5><a href="{% url 'car_detail' car.id %}">{{ car.make }} {{ car.model }} {{ car.year }}</a></h5>
