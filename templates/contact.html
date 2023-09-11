@@ -48,7 +48,7 @@
             <section class="contact_us bg-dark-200">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                        <!-- <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
                             <div class="home_contact">
                                 <form action="{% url 'send_contact' %}" method="POST">
                                     {% csrf_token %}
@@ -60,7 +60,7 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <div class="col-lg-5" data-aos="fade-right" data-aos-duration="1000">
                             <div class="section-header">
@@ -77,12 +77,20 @@
                         
                                     </div>
                                     <div class="social_sites">
-                                        <ul class="d-flex align-items-center justify-content-center">
-                                            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-                                            <li><a href="#"><i class="bi bi-tiktok"></i></a></li>
-                                            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-                                            <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
-                                            <li><a href="#"><i class="bi bi-telegram"></i></a></li>
+                                        <ul class="d-flex align-items-left justify-content-left">
+                                            {% if setting.facebook %}
+                                            <li><a href="{{ setting.facebook }}"><i class="bi bi-facebook"></i></a></li>
+                                            {% endif %}
+                                            {% if setting.instagram %}
+                                            <li><a href="{{ setting.instagram }}"><i class="bi bi-tiktok"></i></a></li>
+                                            {% endif %}
+                                            {% if setting.tiktok %}
+                                            <li><a href="{{ setting.tiktok }}"><i class="bi bi-instagram"></i></a></li>
+                                            {% endif %}
+                                            {% if setting.whatsapp %}
+                                            <li><a href="{{ setting.whatsapp }}"><i class="bi bi-whatsapp"></i></a></li>
+                                            {% endif %}
+                                            <!-- <li><a href="#"><i class="bi bi-telegram"></i></a></li> -->
                                         </ul>
                                     </div>
                                 </div>

@@ -13421,7 +13421,6 @@ body.left_menu .mr_menu {
 }
 
 .theme_slider_8 .swiper-slide .slider .slide_content .slide_content_wrapper {
-  display: flex;
   align-items: center;
   padding: 0 0;
   transition: all 0.5s ease-in-out;
