@@ -88,8 +88,8 @@ class Contact(models.Model):
         return self.name 
     
     class Meta:
-        verbose_name = "Контакт"
-        verbose_name_plural = "Контакты"
+        verbose_name = "Заявки на подбор"
+        verbose_name_plural = "Заявки на подбор"
 
 class Review(models.Model):
     name = models.CharField(

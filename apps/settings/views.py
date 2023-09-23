@@ -1,7 +1,9 @@
 from django.shortcuts import render, redirect
+import asyncio
 
 from apps.settings.models import Setting, News, Benefit, Review, Contact, Team
 from apps.cars.models import Car, CarImage
+from apps.telegram.views import send_contact_telegram
 
 # Create your views here.
 def index(request):
@@ -38,6 +40,8 @@ def send_contact(request):
     name = request.POST.get('name')
     phone = request.POST.get('phone')
     user_contact = Contact.objects.create(name=name, phone=phone)
+    asyncio.run(send_contact_telegram(
+            name, phone))
     return redirect('index')
 
 def news_detail(request, id):
